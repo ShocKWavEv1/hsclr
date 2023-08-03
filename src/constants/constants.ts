@@ -62,7 +62,7 @@ export const scrollHeroText = () => {
     { xPercent: 0 },
     {
       xPercent: -200,
-      skewX: 150,
+      //skewX: 150,
       scrollTrigger: {
         trigger: ".container",
         start: "top top",
@@ -77,7 +77,7 @@ export const scrollHeroText = () => {
     { xPercent: 0 },
     {
       xPercent: 270,
-      skewX: -150,
+      //skewX: -150,
       scrollTrigger: {
         trigger: ".container",
         start: "top top",
@@ -92,7 +92,7 @@ export const scrollHeroText = () => {
     { xPercent: 0 },
     {
       xPercent: -50,
-      skewX: 100,
+      //skewX: 100,
       scrollTrigger: {
         trigger: ".container",
         start: "top top",
@@ -101,6 +101,29 @@ export const scrollHeroText = () => {
       },
     }
   );
+};
+
+export const scrollDiscoverReelText = () => {
+  const textElement1 = document.querySelectorAll(".discover-reel");
+
+  const tl = gsap.timeline({ paused: true });
+
+  // Define the animation you want to perform
+  tl.to(textElement1, {
+    xPercent: -50, // Move the text 100% to the right (it will move out of the screen)
+    opacity: 1,
+    duration: 0.2,
+  });
+
+  // Set up the ScrollTrigger
+  ScrollTrigger.create({
+    trigger: textElement1, // Element to trigger the animation
+    start: 'top top', // Trigger point, adjust as needed
+    end: 'bottom bottom', // End point, adjust as needed
+    animation: tl, // Pass the timeline to the ScrollTrigger
+    toggleActions: 'play none none play', // Play the animation once and don't reverse it
+    scrub: true, // Enable smooth scrolling effect
+  });
 };
 
 export const scrollColumnImages = () => {

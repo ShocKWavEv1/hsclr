@@ -257,3 +257,53 @@ a {
   left: 100%;
   top: 0;
 }
+
+.gallery {
+	height: 175vh;
+	overflow: hidden;
+	background: black;
+}
+.gallery .galleryWrapper {
+	position: relative;
+	top: -12.5vh;
+	height: 200vh;
+	display: flex;
+	gap: 2vw;
+	padding: 2vw;
+}
+.gallery .galleryWrapper .column {
+	position: relative;
+	height: 100%;
+	width: 25%;
+	min-width: 350px;
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
+	white-space: nowrap;
+}
+.gallery .galleryWrapper .column .imageContainer {
+	position: absolute;
+	height: 33%;
+	width: 100%;
+	position: relative;
+	border-radius: 1vw;
+	overflow: hidden;
+}
+.gallery .galleryWrapper .column .imageContainer img {
+	object-fit: cover;
+}
+.gallery .galleryWrapper .column:nth-of-type(1) {
+	top: -30%;
+}
+.gallery .galleryWrapper .column:nth-of-type(2) {
+	top: -70%;
+}
+.gallery .galleryWrapper .column:nth-of-type(3) {
+	top: -30%;
+}
+.gallery .galleryWrapper .column:nth-of-type(4) {
+	top: -60%;
+}
+.spacer {
+	height: 100vh;
+}

@@ -34,7 +34,6 @@ const Clients: React.FC<ClientsProps> = ({}) => {
           viewport={{ once: true }}
           transition={{
             duration: 1,
-            delay: 0.25,
           }}
         >
           <Text variant="XSSEMIBOLD" color="egg.200">
@@ -47,7 +46,7 @@ const Clients: React.FC<ClientsProps> = ({}) => {
           viewport={{ once: true }}
           transition={{
             duration: 1,
-            delay: 0.75,
+            delay: 0.25,
           }}
         >
           <Box w="600px" pt="50px" textAlign="center">

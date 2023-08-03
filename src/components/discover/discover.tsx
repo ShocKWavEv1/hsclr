@@ -1,14 +1,11 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { Box, Heading } from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import { DiscoverProps } from "./model";
 
-const Discover: React.FC<DiscoverProps> = ({}) => {
-  const firstText: any = useRef(null);
-  const secondText: any = useRef(null);
-  const slider: any = useRef(null);
+const Discover = ({}) => {
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
   let xPercent = 0;
   let direction = -1;
 
@@ -17,16 +14,15 @@ const Discover: React.FC<DiscoverProps> = ({}) => {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 0.25,
+        scrub: 1,
         start: "top center",
         end: "bottom bottom",
         onUpdate: (e) => (direction = e.direction * -1),
       },
     });
-    requestAnimationFrame(animate);
   }, []);
 
-  const animate = () => {
+  const handleScroll = () => {
     if (xPercent < -100) {
       xPercent = 0;
     } else if (xPercent > 0) {
@@ -34,9 +30,15 @@ const Discover: React.FC<DiscoverProps> = ({}) => {
     }
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
+    xPercent += 0.25 * direction;
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <main className="landing">

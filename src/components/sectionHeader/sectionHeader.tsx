@@ -7,6 +7,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
   hasButton,
   isDark,
+  brackets,
 }) => {
   return (
     <Box
@@ -45,6 +46,9 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           >
             {title}
           </Heading>
+          <Text variant="LGREGULAR" color={isDark ? "egg.200" : "licorice.500"}>
+            {brackets}
+          </Text>
           {hasButton && (
             <Box pt="30px">
               <Button colorScheme="primary" size="sm">

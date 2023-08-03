@@ -54,6 +54,7 @@ const Manifesto: React.FC<ManifestoProps> = ({}) => {
       <SectionHeader
         section="manifesto"
         title="Meet our manifesto"
+        brackets={"[ blur boundaries of difference ]"}
         hasButton={false}
         isDark
       />

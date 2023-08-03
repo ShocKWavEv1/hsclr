@@ -23,6 +23,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
       <SectionHeader
         section="projects"
         title="You are looking for a partner rather than a supplier"
+        brackets={"[ working collaboratively towards a shared goal ]"}
         hasButton={false}
         isDark
       />
@@ -33,7 +34,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
         justifyContent="center"
         flexDirection="row"
       >
-        <Box w="80%" h="auto" mt="80px" p="0px 20px">
+        <Box w="70%" h="auto" mt="80px" p="0px 20px">
           <Box w="100%" display="flex" flexDirection="row" gap="50px">
             <ColumnImages
               images={projectsColumn1}

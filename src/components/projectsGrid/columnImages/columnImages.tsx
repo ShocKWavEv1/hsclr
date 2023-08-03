@@ -53,6 +53,7 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                   flexDirection="column"
                   overflow="hidden"
                   position="relative"
+                  borderRadius="1vw"
                 >
                   <Box
                     w="100%"
@@ -62,7 +63,7 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                   >
                     <Image
                       src={item.img}
-                      alt={"Hiii"}
+                      alt={"housecolor-projects"}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -82,8 +83,16 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                   <Text variant="MDREGULAR" color="egg.200">
                     {item.title}
                   </Text>
-                  <Text variant="XSREGULAR" color="egg.200" opacity={0.75}>
+                  <Text
+                    py="3px"
+                    variant="XSREGULAR"
+                    color="egg.200"
+                    opacity={0.75}
+                  >
                     {item.description}
+                  </Text>
+                  <Text variant="XSREGULAR" color="egg.200" opacity={0.75}>
+                    {item.number}
                   </Text>
                 </Box>
               </motion.div>

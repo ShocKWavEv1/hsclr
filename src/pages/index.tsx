@@ -6,6 +6,7 @@ import {
   customCursor,
   scrollBackgroundColor,
   scrollColumnImages,
+  scrollDiscoverReelText,
   scrollHeroText,
 } from "@/constants/constants";
 import Services from "@/components/services/services";
@@ -14,6 +15,9 @@ import Manifesto from "@/components/manifesto/manifesto";
 import Clients from "@/components/clients/clients";
 import Discover from "@/components/discover/discover";
 import Reel from "@/components/reel/reel";
+import Capture from "@/components/capture/capture";
+import ParallaxGrid from "@/components/parallaxGrid/parallaxGrid";
+import Team from "@/components/team/team";
 
 export default function Home() {
   const router = useRouter();
@@ -21,6 +25,7 @@ export default function Home() {
   useEffect(() => {
     customCursor();
     scrollHeroText();
+    scrollDiscoverReelText();
     scrollBackgroundColor();
     scrollColumnImages();
   }, []);
@@ -33,21 +38,9 @@ export default function Home() {
       <Manifesto />
       <Discover />
       <Reel />
-      <Box
-        data-bgcolor="#000"
-        data-textcolor="#FEF8DC"
-        w="100%"
-        h="100vh"
-        bg="hotpink"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        flexDirection="column"
-      >
-        <Heading variant="H1LIGHT" color="egg.200">
-          Hi housecolor :)
-        </Heading>
-      </Box>
+      <Capture />
+      <ParallaxGrid />
+      <Team />
     </Box>
   );
 }

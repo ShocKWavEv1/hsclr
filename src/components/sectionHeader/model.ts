@@ -3,4 +3,5 @@ export interface SectionHeaderProps {
     title: string;
     hasButton: boolean;
     isDark: boolean;
+    brackets?: string;
 }
