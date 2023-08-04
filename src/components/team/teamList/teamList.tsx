@@ -79,18 +79,11 @@ const TeamList: React.FC<TeamListProps> = ({
                   flexDirection="column"
                   pt="10px"
                 >
-                  <Text variant="MDREGULAR" color="egg.200">
-                    {item.name}
-                  </Text>
-                  <Text
-                    py="3px"
-                    variant="XSREGULAR"
-                    color="egg.200"
-                    opacity={0.75}
-                  >
+                  <Text variant="MDREGULAR">{item.name}</Text>
+                  <Text py="3px" variant="XSREGULAR" opacity={0.75}>
                     {item.role}
                   </Text>
-                  <Text variant="XSREGULAR" color="egg.200" opacity={0.75}>
+                  <Text variant="XSREGULAR" opacity={0.75}>
                     {item.number}
                   </Text>
                 </Box>

@@ -9,9 +9,9 @@ const ParallaxColumn: React.FC<ParallaxColumnProps> = ({ images, y }) => {
       <motion.div className="column" style={{ y }}>
         {images.map((src: any, i: any) => {
           return (
-            <div key={i} className="imageContainer">
+            <Box key={i} className="imageContainer">
               <Image src={`/static/images/${src}`} alt="image" fill />
-            </div>
+            </Box>
           );
         })}
       </motion.div>

@@ -2,6 +2,7 @@ import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import { clients } from "./constants";
 import { ClientsProps } from "./model";
 import { motion } from "framer-motion";
+import TextMaskY from "../animations/textY/textY";
 
 const Clients: React.FC<ClientsProps> = ({}) => {
   const listClients = clients.join(", ");
@@ -29,9 +30,9 @@ const Clients: React.FC<ClientsProps> = ({}) => {
         className="bg-noise"
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{
             duration: 1,
           }}
@@ -40,25 +41,28 @@ const Clients: React.FC<ClientsProps> = ({}) => {
             They trust us
           </Text>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1,
-            delay: 0.25,
-          }}
-        >
-          <Box w="600px" pt="50px" textAlign="center">
-            <Heading variant="H7REGULAR" color="egg.200">
-              {listClients}.
-            </Heading>
-          </Box>
-        </motion.div>
+        <Box w="600px" pt="50px" textAlign="center">
+          <TextMaskY
+            text={clients}
+            variant="H7REGULAR"
+            className=""
+            delay={0.25}
+            isFooter={false}
+          />
+        </Box>
         <Box pt="50px">
-          <Button size="sm" variant="solid" colorScheme="primary">
-            Discover more projects
-          </Button>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1,
+            }}
+          >
+            <Button size="sm" variant="solid" colorScheme="primary">
+              Discover more projects
+            </Button>
+          </motion.div>
         </Box>
       </Box>
     </Box>

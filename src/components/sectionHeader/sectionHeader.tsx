@@ -30,7 +30,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           </Box>
           <Text
             variant="XSBOLD"
-            color={isDark ? "egg.200" : "licorice.500"}
+            color={isDark ? "egg.200" : "black"}
             textTransform="lowercase"
             opacity={0.65}
             lineHeight={2.65}
@@ -40,13 +40,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           </Text>
         </Box>
         <Box w="100%" display="flex" flexDirection="column">
-          <Heading
-            variant="H7REGULAR"
-            color={isDark ? "egg.200" : "licorice.500"}
-          >
+          <Heading variant="H7REGULAR" color={isDark ? "egg.200" : "black"}>
             {title}
           </Heading>
-          <Text variant="LGREGULAR" color={isDark ? "egg.200" : "licorice.500"}>
+          <Text variant="LGREGULAR" color={isDark ? "egg.200" : "black"}>
             {brackets}
           </Text>
           {hasButton && (

@@ -1,8 +1,9 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { curtain } from "./constants";
+import { curtain, phrases } from "./constants";
 import { PreloaderProps } from "./model";
 import { motion } from "framer-motion";
+import TextMaskY from "../animations/textY/textY";
 
 const Preloader: React.FC<PreloaderProps> = () => {
   useEffect(() => {
@@ -22,22 +23,31 @@ const Preloader: React.FC<PreloaderProps> = () => {
       zIndex={10}
       className="preloader"
     >
-      <motion.div
-        key={"curtain"}
-        exit={{ transition: { duration: 1 }, opacity: 0, display: "none" }}
-        initial={{ opacity: 0 }}
-        animate={{ transition: { delay: 0.3, duration: 1 }, opacity: 1 }}
-        style={{ width: "auto", display: "flex" }}
+      <Box
+        w="100%"
+        textAlign="center"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
-        <Heading variant="H10REGULAR" color="egg.200">
-          housecolor | studio
-        </Heading>
-      </motion.div>
+        <TextMaskY
+          text={phrases}
+          variant="H10REGULAR"
+          delay={0.25}
+          isFooter={false}
+          className=""
+        />
+      </Box>
       <motion.div
         key={"curtain"}
-        exit={{ transition: { duration: 1 }, opacity: 0, display: "none" }}
-        initial={{ opacity: 0 }}
-        animate={{ transition: { delay: 0.6, duration: 1 }, opacity: 1 }}
+        exit={{
+          transition: { duration: 1 },
+          opacity: 0,
+          y: 0,
+          display: "none",
+        }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ transition: { delay: 0.6, duration: 1 }, opacity: 1, y: 0 }}
         style={{ width: "auto", display: "flex" }}
       >
         <Box>

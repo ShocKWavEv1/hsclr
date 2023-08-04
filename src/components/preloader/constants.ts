@@ -1,5 +1,6 @@
 import gsap from "gsap";
 
+export const phrases = ["housecolor | studio"];
 export const curtain = () => {
     const tl = gsap.timeline();
 

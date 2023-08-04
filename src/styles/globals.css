@@ -183,10 +183,10 @@ a {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  animation: hitZak 1s ease-in-out infinite alternate;
+  animation: loading 1s ease-in-out infinite alternate;
 }
 
-@keyframes hitZak {
+@keyframes loading {
   0% {
     left: 0;
     transform: translateX(-1%);
@@ -222,6 +222,7 @@ a {
   background: url(../static/bg/bg-noise-right.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: right;
 }
 
 .landing{
@@ -263,6 +264,7 @@ a {
 	overflow: hidden;
 	background: black;
 }
+
 .gallery .galleryWrapper {
 	position: relative;
 	top: -12.5vh;
@@ -271,6 +273,7 @@ a {
 	gap: 2vw;
 	padding: 2vw;
 }
+
 .gallery .galleryWrapper .column {
 	position: relative;
 	height: 100%;
@@ -281,6 +284,7 @@ a {
 	gap: 2vw;
 	white-space: nowrap;
 }
+
 .gallery .galleryWrapper .column .imageContainer {
 	position: absolute;
 	height: 33%;
@@ -306,4 +310,10 @@ a {
 }
 .spacer {
 	height: 100vh;
+}
+
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FEF8DC;
 }

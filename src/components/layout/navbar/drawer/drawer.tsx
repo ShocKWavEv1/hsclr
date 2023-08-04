@@ -12,16 +12,17 @@ const Drawer: React.FC<DrawerButtonProps> = ({}) => {
       alignItems="center"
       justifyContent="center"
       borderRadius="25em"
+      cursor="pointer"
     >
-      <Text variant="SMREGULAR" cursor="pointer" color="egg.200">
-        Menu
-      </Text>
-      <Box pl="7px" pt="2px" w="auto" display="flex" flexDirection="column">
+      <Box pr="7px" pt="2px" w="auto" display="flex" flexDirection="column">
         <Stack spacing="4px" direction="column">
           <Box w="35px" h="1px" bg="egg.200"></Box>
           <Box w="35px" h="1px" bg="egg.200"></Box>
         </Stack>
       </Box>
+      <Text variant="SMREGULAR" cursor="pointer" color="egg.200">
+        Menu
+      </Text>
     </Box>
   );
 };

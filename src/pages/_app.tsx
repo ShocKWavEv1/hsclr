@@ -1,13 +1,16 @@
 import Cursor from "@/components/cursor/customCursor";
 import Layout from "@/components/layout/layout";
 import Meta from "@/components/meta/meta";
+import PageTransition from "@/components/pageTransition/pageTransition";
 import Preloader from "@/components/preloader/preloader";
+import { ScrollProvider } from "@/hooks/useLenis";
 import "@/styles/globals.css";
 import Fonts from "@/theme/fonts/fonts";
 import theme from "@/theme/theme";
 import { ChakraProvider } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
 
 export default function App({
@@ -17,15 +20,11 @@ export default function App({
   Component: any;
   pageProps: any;
 }) {
-  const [isLoaded, setLoaded] = useState(false);
   const LoadingBarRef: any = useRef(null);
 
   const router = useRouter();
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3500);
     // router event listeners for loadingBar
     router.events.on("routeChangeStart", handleRouteStart);
     router.events.on("routeChangeComplete", handleRouteComplete);
@@ -69,10 +68,14 @@ export default function App({
       <Fonts />
       <Cursor />
       <Preloader />
-      <LoadingBar ref={LoadingBarRef} height={5} color="#BC162A" />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <LoadingBar ref={LoadingBarRef} height={3} color="#BC162A" />
+      <PageTransition router={router}>
+        <ScrollProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ScrollProvider>
+      </PageTransition>
     </ChakraProvider>
   );
 }

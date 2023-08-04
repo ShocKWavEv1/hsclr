@@ -5,6 +5,7 @@ import { NavbarProps } from "./model";
 import circles from "../../../static/logo/double_circles.svg";
 import { navigation } from "./constants";
 import SlideY from "@/components/animations/slideY/slideY";
+import Drawer from "./drawer/drawer";
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
   const router = useRouter();
@@ -59,22 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             alignItems="center"
             justifyContent="flex-end"
           >
-            <Stack spacing="20px" direction="row">
-              {navigation.map((item: any) => {
-                return (
-                  <Heading
-                    key={item.id}
-                    variant="H10REGULAR"
-                    cursor="pointer"
-                    color="egg.200"
-                    onClick={() => router.push(item.path)}
-                    className="navLink"
-                  >
-                    {item.label}
-                  </Heading>
-                );
-              })}
-            </Stack>
+            <Drawer />
           </Box>
         </SimpleGrid>
       </SlideY>

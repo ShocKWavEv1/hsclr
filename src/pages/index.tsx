@@ -1,4 +1,4 @@
-import { Box, Button, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import NoiseGradient from "@/components/noiseGradient/noiseGradient";
@@ -9,7 +9,6 @@ import {
   scrollDiscoverReelText,
   scrollHeroText,
 } from "@/constants/constants";
-import Services from "@/components/services/services";
 import ProjectsGrid from "@/components/projectsGrid/projectsGrid";
 import Manifesto from "@/components/manifesto/manifesto";
 import Clients from "@/components/clients/clients";
@@ -18,6 +17,7 @@ import Reel from "@/components/reel/reel";
 import Capture from "@/components/capture/capture";
 import ParallaxGrid from "@/components/parallaxGrid/parallaxGrid";
 import Team from "@/components/team/team";
+import Footer from "@/components/layout/footer/footer";
 
 export default function Home() {
   const router = useRouter();

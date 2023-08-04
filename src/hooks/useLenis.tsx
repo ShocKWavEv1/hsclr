@@ -31,7 +31,7 @@ export const ScrollProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2,
+      duration: 2.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: "vertical",
       gestureDirection: "vertical",
@@ -43,10 +43,11 @@ export const ScrollProvider = ({ children }: { children: ReactNode }) => {
     setLenis(lenis);
 
     return () => {
+      lenis.reset();
       lenis.destroy();
       setLenis(null);
     };
-  }, [router]);
+  }, []);
 
   const memoedValue = useMemo(
     () => ({

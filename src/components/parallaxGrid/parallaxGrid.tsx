@@ -36,9 +36,9 @@ const ParallaxGrid: React.FC<ParallaxGridProps> = ({}) => {
 
   return (
     <Box bg="black">
-      <main className="main">
-        <div ref={gallery} className="gallery">
-          <div className="galleryWrapper">
+      <Box className="main">
+        <Box ref={gallery} className="gallery">
+          <Box className="galleryWrapper">
             <ParallaxColumn images={[images[0], images[1], images[2]]} y={y} />
             <ParallaxColumn images={[images[3], images[4], images[5]]} y={y2} />
             <ParallaxColumn images={[images[6], images[7], images[8]]} y={y3} />
@@ -46,9 +46,9 @@ const ParallaxGrid: React.FC<ParallaxGridProps> = ({}) => {
               images={[images[9], images[10], images[11]]}
               y={y4}
             />
-          </div>
-        </div>
-      </main>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };

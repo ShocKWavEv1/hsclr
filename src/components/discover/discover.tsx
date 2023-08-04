@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { motion } from "framer-motion";
+import { Box } from "@chakra-ui/react";
 
 const Discover = ({}) => {
   const firstText = useRef(null);
@@ -41,14 +43,21 @@ const Discover = ({}) => {
   }, []);
 
   return (
-    <main className="landing">
-      <div className="sliderContainer">
-        <div ref={slider} className="slider">
-          <p ref={firstText}>Discover our reel -</p>
-          <p ref={secondText}>Discover our reel -</p>
-        </div>
-      </div>
-    </main>
+    <Box className="landing">
+      <Box className="sliderContainer">
+        <motion.div
+          initial={{ opacity: 0, y: 250 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1 }}
+        >
+          <Box ref={slider} className="slider">
+            <p ref={firstText}>discover ↔ our ↔ reel ↔</p>
+            <p ref={secondText}>discover ↔ our ↔ reel ↔</p>
+          </Box>
+        </motion.div>
+      </Box>
+    </Box>
   );
 };
 

@@ -9,7 +9,7 @@ const Team: React.FC<TeamProps> = ({}) => {
     <Box
       as="section"
       data-bgcolor="#000"
-      data-textcolor="#FEFCED"
+      data-textcolor="#FEF8DC"
       w="100%"
       h="auto"
       display="flex"
