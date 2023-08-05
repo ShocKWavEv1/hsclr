@@ -46,14 +46,14 @@ const Discover = ({}) => {
     <Box className="landing">
       <Box className="sliderContainer">
         <motion.div
-          initial={{ opacity: 0, y: 250 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 1 }}
         >
           <Box ref={slider} className="slider">
-            <p ref={firstText}>discover ↔ our ↔ reel ↔</p>
-            <p ref={secondText}>discover ↔ our ↔ reel ↔</p>
+            <p ref={firstText}>Discover ↔ our ↔ reel ↔ </p>
+            <p ref={secondText}>Discover ↔ our ↔ reel ↔ </p>
           </Box>
         </motion.div>
       </Box>

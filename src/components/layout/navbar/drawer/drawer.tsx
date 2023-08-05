@@ -1,28 +1,31 @@
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { opacity } from "./animation";
 import { DrawerButtonProps } from "./model";
 
-const Drawer: React.FC<DrawerButtonProps> = ({}) => {
+const Drawer: React.FC<DrawerButtonProps> = ({ isOpen, setOpen }) => {
   return (
     <Box
       w="auto"
       h="auto"
-      p="4px 16px"
+      p="2px 14px"
       bg="rgba(255,255,255,.1)"
       display="flex"
       alignItems="center"
       justifyContent="center"
       borderRadius="25em"
       cursor="pointer"
+      onClick={() => setOpen()}
     >
-      <Box pr="7px" pt="2px" w="auto" display="flex" flexDirection="column">
-        <Stack spacing="4px" direction="column">
-          <Box w="35px" h="1px" bg="egg.200"></Box>
-          <Box w="35px" h="1px" bg="egg.200"></Box>
-        </Stack>
+      <Box className={`burger ${isOpen ? "burgerActive" : ""}`}></Box>
+      <Box pl="7px" className="label" color="egg.200">
+        <motion.p variants={opacity} animate={!isOpen ? "open" : "closed"}>
+          Menu
+        </motion.p>
+        <motion.p variants={opacity} animate={isOpen ? "open" : "closed"}>
+          Close
+        </motion.p>
       </Box>
-      <Text variant="SMREGULAR" cursor="pointer" color="egg.200">
-        Menu
-      </Text>
     </Box>
   );
 };

@@ -1,1 +1,4 @@
-export interface DrawerButtonProps {}
+export interface DrawerButtonProps {
+    isOpen: boolean;
+    setOpen: () => void;
+}
