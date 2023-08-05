@@ -1,5 +1,4 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const Discover = ({}) => {
