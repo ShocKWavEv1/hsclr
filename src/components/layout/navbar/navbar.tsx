@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>
-              <Heading pl="5px" variant="H9SEMIBOLD" color="egg.200">
+              <Heading pl="10px" variant="H9SEMIBOLD" color="egg.200">
                 house
               </Heading>
               <span>

@@ -18,7 +18,7 @@ const Drawer: React.FC<DrawerButtonProps> = ({ isOpen, setOpen }) => {
       onClick={() => setOpen()}
     >
       <Box className={`burger ${isOpen ? "burgerActive" : ""}`}></Box>
-      <Box pl="7px" className="label" color="egg.200">
+      <Box pl="10px" className="label" color="egg.200">
         <motion.p variants={opacity} animate={!isOpen ? "open" : "closed"}>
           Menu
         </motion.p>
