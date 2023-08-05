@@ -231,39 +231,43 @@ ul{
   background-position: right;
 }
 
-.landing{
+
+
+.main{
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
+  height: 100vh;
   overflow: hidden;
+  background-color: #BC162A;
+}
+
+.main img{
+  object-fit: cover;
 }
 
 .sliderContainer{
   position: absolute;
+  top: calc(100vh - 350px);
 }
 
 .slider{
   position: relative;
   white-space: nowrap;
+  overflow: hidden;
 }
 
-.slider p{
+.slider .text-slider{
   position: relative;
   margin: 0px;
+  font-family: "Roobert";
+  font-weight: 300;
   color: #FEF8DC;
   font-size: 230px;
-  font-weight: 300;
-  font-family: "Roobert";
-  padding-right: 50px;
+  margin-left: 500px;
 }
 
-.slider p:nth-of-type(2){
-  position: absolute;
-  left: 100%;
-  top: 0;
-}
+
+
 
 .gallery {
 	height: 175vh;
@@ -427,7 +431,13 @@ ul{
   align-items: center;
 }
 
-p:nth-of-type(2) {
+.menu-text {
+  font-family: "Roobert";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.menu-text:nth-of-type(2) {
   position: absolute;
   opacity: 0;
 }
@@ -437,4 +447,25 @@ p:nth-of-type(2) {
   color: #FEF8DC;
   font-weight: 300;
   font-size: 54px;
+}
+
+.discover-header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #BC162A;
+}
+
+.discover-title {
+  color: #FEF8DC;
+  font-family: "Roobert";
+  font-weight: 300;
+  font-size: 20em;
+  z-index: 1;
+  margin: 0;
+  white-space: nowrap;
+  margin-top: auto;
 }

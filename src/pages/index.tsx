@@ -7,6 +7,7 @@ import {
   scrollBackgroundColor,
   scrollColumnImages,
   scrollDiscoverReelText,
+  scrollDiscoverText,
   scrollHeroText,
 } from "@/constants/constants";
 import ProjectsGrid from "@/components/projectsGrid/projectsGrid";
@@ -25,6 +26,7 @@ export default function Home() {
   useEffect(() => {
     customCursor();
     scrollHeroText();
+    scrollDiscoverText();
     scrollDiscoverReelText();
     scrollBackgroundColor();
     scrollColumnImages();

@@ -103,6 +103,25 @@ export const scrollHeroText = () => {
   );
 };
 
+export const scrollDiscoverText = () => {
+  const textElement1 = document.querySelectorAll(".text-slider");
+
+  gsap.fromTo(
+    textElement1,
+    { xPercent: 0 },
+    {
+      xPercent: -600,
+      //skewX: 150,
+      scrollTrigger: {
+        trigger: ".container",
+        start: "center center",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }
+  );
+};
+
 export const scrollDiscoverReelText = () => {
   const textElement1 = document.querySelectorAll(".discover-reel");
 

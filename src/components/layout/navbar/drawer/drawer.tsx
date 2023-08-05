@@ -19,10 +19,18 @@ const Drawer: React.FC<DrawerButtonProps> = ({ isOpen, setOpen }) => {
     >
       <Box className={`burger ${isOpen ? "burgerActive" : ""}`}></Box>
       <Box pl="10px" className="label" color="egg.200">
-        <motion.p variants={opacity} animate={!isOpen ? "open" : "closed"}>
+        <motion.p
+          className="menu-text"
+          variants={opacity}
+          animate={!isOpen ? "open" : "closed"}
+        >
           Menu
         </motion.p>
-        <motion.p variants={opacity} animate={isOpen ? "open" : "closed"}>
+        <motion.p
+          className="menu-text"
+          variants={opacity}
+          animate={isOpen ? "open" : "closed"}
+        >
           Close
         </motion.p>
       </Box>

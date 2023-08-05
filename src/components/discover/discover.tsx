@@ -1,62 +1,24 @@
+import { Box, Heading } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
-import { Box } from "@chakra-ui/react";
 
 const Discover = ({}) => {
-  const firstText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 1,
-        start: "top center",
-        end: "bottom bottom",
-        onUpdate: (e) => (direction = e.direction * -1),
-      },
-    });
-  }, []);
-
-  const handleScroll = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.25 * direction;
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <Box className="landing">
-      <Box className="sliderContainer">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1 }}
-        >
-          <Box ref={slider} className="slider">
-            <p ref={firstText}>Discover ↔ our ↔ reel ↔ </p>
-            <p ref={secondText}>Discover ↔ our ↔ reel ↔ </p>
-          </Box>
-        </motion.div>
-      </Box>
+    <Box w="100%" h="auto" pb="50px">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        style={{ overflow: "hidden" }}
+      >
+        <Box className="slider">
+          <Heading className="text-slider" variant="H1REGULAR" color="egg.200">
+            Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
+            reel ↔
+          </Heading>
+        </Box>
+      </motion.div>
     </Box>
   );
 };
