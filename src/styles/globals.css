@@ -375,6 +375,12 @@ ul{
   grid-gap: 10px;
 }
 
+.summary-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  grid-gap: 0px;
+}
+
 .burger {
   width: 40px;
   position: relative;

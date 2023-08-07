@@ -36,6 +36,7 @@ const Preloader: React.FC<PreloaderProps> = () => {
           delay={0.25}
           isFooter={false}
           className=""
+          once
         />
       </Box>
       <motion.div

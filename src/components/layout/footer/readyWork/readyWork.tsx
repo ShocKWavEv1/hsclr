@@ -23,6 +23,7 @@ const ReadyWork: React.FC<ReadyWorkProps> = ({ text, socialMedia }) => {
             className={"stroke-text"}
             delay={0.25}
             isFooter
+            once={false}
           />
           <Box
             position="absolute"

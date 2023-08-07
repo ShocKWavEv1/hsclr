@@ -8,6 +8,7 @@ const Nosotros: React.FC = ({}) => {
   useEffect(() => {
     window.scroll({ top: 0 });
   }, []);
+
   return (
     <Box
       w="100%"

@@ -39,6 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               alignItems="center"
               justifyContent="flex-start"
               cursor="pointer"
+              onClick={() => router.push("/")}
             >
               <Box
                 w="35px"
@@ -46,7 +47,6 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
-                onClick={() => router.push("/")}
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>

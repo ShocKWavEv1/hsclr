@@ -9,6 +9,7 @@ const TextMaskY: React.FC<TextYProps> = ({
   delay,
   className,
   isFooter,
+  once,
 }) => {
   const phrases = text;
   const animation = {
@@ -25,7 +26,7 @@ const TextMaskY: React.FC<TextYProps> = ({
 
   const { ref, inView, entry } = useInView({
     threshold: 1,
-    triggerOnce: false,
+    triggerOnce: once,
   });
 
   return (

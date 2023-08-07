@@ -4,4 +4,5 @@ export interface TextYProps {
     delay: number;
     className: string;
     isFooter: boolean;
+    once: boolean;
 }

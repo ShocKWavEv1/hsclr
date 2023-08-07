@@ -8,7 +8,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Box>
       <Navbar />
       <Box w="100vw">{children}</Box>
-      <Footer />
     </Box>
   );
 };

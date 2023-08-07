@@ -43,6 +43,7 @@ export default function Home() {
       <Capture />
       <ParallaxGrid />
       <Team />
+      <Footer />
     </Box>
   );
 }

@@ -8,6 +8,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   hasButton,
   isDark,
   brackets,
+  description,
 }) => {
   return (
     <Box
@@ -53,6 +54,16 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               </Button>
             </Box>
           )}
+          {description &&
+            description.map((item: any, i: number) => {
+              return (
+                <Box w="100%" mt="30px" key={i}>
+                  <Text variant="MDREGULAR" color="egg.200">
+                    {item}
+                  </Text>
+                </Box>
+              );
+            })}
         </Box>
       </Stack>
     </Box>

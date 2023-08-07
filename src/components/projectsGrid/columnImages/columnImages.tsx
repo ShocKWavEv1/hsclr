@@ -35,7 +35,7 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
               display="flex"
               flexDirection="column"
               className="image-gallery"
-              onClick={() => router.push("/nosotros")}
+              onClick={() => router.push("/projects")}
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
