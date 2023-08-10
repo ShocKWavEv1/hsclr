@@ -4,6 +4,7 @@ import { NoiseGradientProps } from "./model";
 import { extraDescription, textMask } from "./constants";
 import HeroFooter from "./heroFooter/heroFooter";
 import HeroText from "./heroText/heroText";
+import Skech from "../skech/skech";
 
 const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
   return (
@@ -15,13 +16,7 @@ const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
       bg="primary.500"
       position="relative"
     >
-      <Suspense fallback="loading">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://noise-gradient.vercel.app"
-        />
-      </Suspense>
+      <Skech />
       <HeroText textMask={textMask} />
       <HeroFooter options={extraDescription} />
     </Box>

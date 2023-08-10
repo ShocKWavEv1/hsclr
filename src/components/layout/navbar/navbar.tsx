@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             alignItems="center"
             justifyContent="flex-end"
           >
-            {/*<Show above="lg">
+            <Show above="lg">
               <Stack spacing="20px" direction="row">
                 {navigation.map((item: any) => {
                   return (
@@ -84,8 +84,8 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   );
                 })}
               </Stack>
-              </Show>*/}
-            <Drawer isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />
+            </Show>
+            {/*<Drawer isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />*/}
           </Box>
         </SimpleGrid>
       </SlideY>

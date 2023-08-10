@@ -6,7 +6,6 @@ export const curtain = () => {
 
     tl.to("body", {
       overflow: "hidden",
-      height: "100vh"
     })
       .to(".preloader .text-container", {
         duration: 1.5,

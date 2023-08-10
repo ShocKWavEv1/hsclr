@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const withTM = require('next-transpile-modules')(['three']);
+
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, options) => {
@@ -16,6 +19,11 @@ const nextConfig = {
           name: 'static/media/[name].[hash].[ext]',
         },
       },
+    }),
+    config.module.rules.push({
+      test: /\.(glsl|vs|fs|vert|frag)$/,
+      exclude: /node_modules/,
+      use: ["raw-loader"],
     });
     return config
   },

@@ -3,12 +3,14 @@ import MainTitle from "@/components/projects/components/mainTitle/mainTitle";
 import Summary from "@/components/projects/components/summary/summary";
 import Synopsis from "@/components/projects/components/synopsis/synopsis";
 import VideoPlayer from "@/components/projects/components/videoPlayer/videoPlayer";
+import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 
 const Projects = () => {
   useEffect(() => {
     window.scroll({ top: 0 });
+    customCursor();
   }, []);
 
   return (
