@@ -9,8 +9,8 @@ export const vertShader = `
         vPosition = position;
 
         vec4 rotatedPosition = mat4(
-            cos(90.0), -sin(90.0), 0.0, 0.0,
-            sin(90.0), cos(90.0), 0.0, 0.0,
+            cos(215.3), -sin(215.3), 0.0, 0.0,
+            sin(215.3), cos(215.3), 0.0, 0.0,
             0.0, 0.0, 1.0, 0.0,
             0.0, 0.0, 0.0, 1.0
         ) * modelViewMatrix * vec4(position, 1.0);

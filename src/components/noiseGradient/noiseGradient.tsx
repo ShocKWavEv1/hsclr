@@ -16,7 +16,9 @@ const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
       bg="primary.500"
       position="relative"
     >
-      <Skech />
+      <Suspense fallback>
+        <Skech />
+      </Suspense>
       <HeroText textMask={textMask} />
       <HeroFooter options={extraDescription} />
     </Box>
