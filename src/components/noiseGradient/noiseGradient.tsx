@@ -4,7 +4,7 @@ import { NoiseGradientProps } from "./model";
 import { extraDescription, textMask } from "./constants";
 import HeroFooter from "./heroFooter/heroFooter";
 import HeroText from "./heroText/heroText";
-import Skech from "../skech/skech";
+import Skech from "../sketch/sketch";
 
 const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
   return (

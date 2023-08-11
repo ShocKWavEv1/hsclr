@@ -18,6 +18,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/skech/skech.jsx", "src/components/skech/skech.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/sketch/sketch.jsx",
+    "src/components/sketch/sketch.jsx"
+  ],
   "exclude": ["node_modules"]
 }

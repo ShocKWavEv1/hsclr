@@ -129,7 +129,7 @@ export const scrollDiscoverReelText = () => {
 
   // Define the animation you want to perform
   tl.to(textElement1, {
-    xPercent: -50, // Move the text 100% to the right (it will move out of the screen)
+    xPercent: -500, // Move the text 100% to the right (it will move out of the screen)
     opacity: 1,
     duration: 0.2,
   });

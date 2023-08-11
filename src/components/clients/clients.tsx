@@ -48,7 +48,7 @@ const Clients: React.FC<ClientsProps> = ({}) => {
             className=""
             delay={0.25}
             isFooter={false}
-            once={false}
+            once
           />
         </Box>
         <Box pt="50px">

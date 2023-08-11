@@ -8,7 +8,6 @@ import "@/styles/globals.css";
 import Fonts from "@/theme/fonts/fonts";
 import theme from "@/theme/theme";
 import { ChakraProvider } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
