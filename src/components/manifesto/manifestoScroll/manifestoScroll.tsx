@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ManifestoScrollProps } from "./model";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import circles from "../../../static/logo/double_circles.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -52,14 +52,15 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
         <div className="reveal">
           <div ref={triggerRef}>
             {text.split("").map((letter, index) => (
-              <span
-                className="reveal-text"
-                key={index}
-                ref={setlettersRef}
-                color="egg.200"
-              >
-                {letter}
-              </span>
+              <Text as="span" key={index} variant="XLREGULAR" color="egg.200">
+                <span
+                  className="reveal-text"
+                  ref={setlettersRef}
+                  color="egg.200"
+                >
+                  {letter}
+                </span>
+              </Text>
             ))}
           </div>
         </div>

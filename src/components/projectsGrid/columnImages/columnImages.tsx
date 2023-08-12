@@ -80,18 +80,18 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                   flexDirection="column"
                   pt="10px"
                 >
-                  <Text variant="MDREGULAR" color="egg.200">
+                  <Text variant="MDMEDIUM" color="egg.200">
                     {item.title}
                   </Text>
                   <Text
                     py="3px"
-                    variant="XSREGULAR"
+                    variant="SMMEDIUM"
                     color="egg.200"
                     opacity={0.75}
                   >
                     {item.description}
                   </Text>
-                  <Text variant="XSREGULAR" color="egg.200" opacity={0.75}>
+                  <Text variant="SMMEDIUM" color="egg.200" opacity={0.75}>
                     {item.number}
                   </Text>
                 </Box>

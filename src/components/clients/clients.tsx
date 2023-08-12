@@ -37,11 +37,11 @@ const Clients: React.FC<ClientsProps> = ({}) => {
             duration: 1,
           }}
         >
-          <Text variant="XSSEMIBOLD" color="egg.200">
+          <Text variant="SMREGULAR" color="egg.200">
             They trust us
           </Text>
         </motion.div>
-        <Box w="600px" pt="50px" textAlign="center">
+        <Box w="680px" pt="50px" textAlign="center">
           <TextMaskY
             text={clients}
             variant="H7REGULAR"

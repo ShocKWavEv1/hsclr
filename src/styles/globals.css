@@ -211,9 +211,8 @@ ul{
 }
 
 .reveal-text {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 80px;
-  font-family: "Roobert";
   line-height: 90px;
   color: rgba(254, 248, 220, .2);
 }
@@ -240,8 +239,7 @@ ul{
 .slider .text-slider{
   position: relative;
   margin: 0px;
-  font-family: "Roobert";
-  font-weight: 300;
+  font-weight: 400;
   color: #FEF8DC;
   font-size: 230px;
   margin-left: 500px;
@@ -423,7 +421,7 @@ ul{
 
 .menu-text {
   font-family: "Roobert";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
 }
 
@@ -433,9 +431,8 @@ ul{
 }
 
 .nav-char-text {
-  font-family: "Roobert";
   color: #FEF8DC;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 54px;
 }
 

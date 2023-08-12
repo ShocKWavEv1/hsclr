@@ -25,7 +25,13 @@ const FooterMedia: React.FC<FooterMediaProps> = ({ socialMedia }) => {
             <Box w="40px" pointerEvents="all" cursor="pointer" className="link">
               <Image priority src={circles} alt="housecolor logo" />
             </Box>
-            <Text pl="10px" opacity={0.75} variant="SMREGULAR" color="egg.200">
+            <Text
+              pl="10px"
+              pt="4px"
+              opacity={0.75}
+              variant="MDMEDIUM"
+              color="egg.200"
+            >
               MMXXII - housecolor
             </Text>
           </Box>
@@ -44,13 +50,13 @@ const FooterMedia: React.FC<FooterMediaProps> = ({ socialMedia }) => {
                   key={item.name}
                   border="1px solid white"
                   p="2px 15px"
-                  borderRadius="1vw"
+                  borderRadius="25em"
                   color="egg.200"
                   transition=".35s ease-in-out"
                   _hover={{ bg: "egg.200", color: "black" }}
                   cursor="pointer"
                 >
-                  <Text opacity={0.75} variant="SMREGULAR">
+                  <Text opacity={0.75} variant="XSMEDIUM" mt="3px">
                     {item.name}
                   </Text>
                 </Box>

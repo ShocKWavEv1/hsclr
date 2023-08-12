@@ -36,7 +36,7 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
                     <Text
                       pl="10px"
                       opacity={0.75}
-                      variant="XSREGULAR"
+                      variant="XSMEDIUM"
                       color="egg.200"
                       textTransform="uppercase"
                       overflow="hidden"
@@ -76,7 +76,7 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
                       _hover={{ bg: "egg.200", color: "black" }}
                       cursor="pointer"
                     >
-                      <Text opacity={0.75} variant="SMREGULAR">
+                      <Text pt="4px" opacity={0.75} variant="XSMEDIUM">
                         {item.name}
                       </Text>
                     </Box>

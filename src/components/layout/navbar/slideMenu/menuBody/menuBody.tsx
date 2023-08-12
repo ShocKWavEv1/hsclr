@@ -10,7 +10,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
 }) => {
   const getChars = (word: string) => {
     let chars: any = [];
-    word.split("").forEach((char, i) => {
+    word.split("-").forEach((char, i) => {
       chars.push(
         <motion.span
           custom={[i * 0.03, (word.length - i) * 0.01]}
@@ -45,42 +45,44 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                 flexDirection="row"
                 cursor="pointer"
               >
-                <motion.p
-                  onMouseOver={() => {
-                    setSelectedLink({ isActive: true, index });
-                  }}
-                  onMouseLeave={() => {
-                    setSelectedLink({ isActive: false, index });
-                  }}
-                  variants={blur}
-                  animate={
-                    selectedLink.isActive && selectedLink.index != index
-                      ? "open"
-                      : "closed"
-                  }
-                  className="nav-char-text"
-                  style={{
-                    width: "auto",
-                    display: "flex",
-                    flexDirection: "row",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Box
-                    w="auto"
-                    display="flex"
-                    alignItems="flex-end"
-                    justifyContent="center"
+                <Text as="span" variant="MDMEDIUM" color="egg.200">
+                  <motion.p
+                    onMouseOver={() => {
+                      setSelectedLink({ isActive: true, index });
+                    }}
+                    onMouseLeave={() => {
+                      setSelectedLink({ isActive: false, index });
+                    }}
+                    variants={blur}
+                    animate={
+                      selectedLink.isActive && selectedLink.index != index
+                        ? "open"
+                        : "closed"
+                    }
+                    className="nav-char-text"
+                    style={{
+                      width: "auto",
+                      display: "flex",
+                      flexDirection: "row",
+                      overflow: "hidden",
+                    }}
                   >
-                    <Text
-                      variant="SMREGULAR"
-                      color="egg.200"
-                      mb="15px"
-                      mr="10px"
-                    >{`[ ${index + 1} ]`}</Text>
-                  </Box>
-                  {getChars(item.label)}
-                </motion.p>
+                    <Box
+                      w="auto"
+                      display="flex"
+                      alignItems="flex-end"
+                      justifyContent="center"
+                    >
+                      <Text
+                        variant="SMREGULAR"
+                        color="egg.200"
+                        mb="22px"
+                        mr="10px"
+                      >{`[ ${index + 1} ]`}</Text>
+                    </Box>
+                    {getChars(item.label)}
+                  </motion.p>
+                </Text>
               </Box>
             );
           })}

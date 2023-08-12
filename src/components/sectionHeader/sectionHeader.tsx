@@ -30,12 +30,13 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             <TriangleRightIcon color={isDark ? "#FEF8DC" : "#000"} />
           </Box>
           <Text
-            variant="XSBOLD"
+            variant="XSMEDIUM"
             color={isDark ? "egg.200" : "black"}
             textTransform="lowercase"
             opacity={0.65}
             lineHeight={2.65}
             pl="2px"
+            pt="4px"
           >
             {section}
           </Text>

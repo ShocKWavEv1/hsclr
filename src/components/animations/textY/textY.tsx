@@ -44,7 +44,7 @@ const TextMaskY: React.FC<TextYProps> = ({
                 variant={variant}
                 color="egg.200"
                 className={isFooter && index === 0 ? className : ""}
-                mt={isFooter && index !== 0 ? "-30px" : "0px"}
+                mt={isFooter && index !== 0 ? "-10px" : "0px"}
                 textDecoration={isFooter && index !== 0 ? "underline" : ""}
               >
                 {phrase}

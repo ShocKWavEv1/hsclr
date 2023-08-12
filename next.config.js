@@ -7,10 +7,6 @@ const nextConfig = {
   webpack: (config, options) => {
     const { dir } = options
     config.module.rules.push({
-      test: /\.(glsl|vs|fs|vert|frag)$/,
-      use: ['raw-loader', 'glslify-loader'],
-    }),
-    config.module.rules.push({
       test: /\.(mp4|webm)$/i,
       use: {
         loader: 'file-loader',
@@ -23,7 +19,13 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(glsl|vs|fs|vert|frag)$/,
       exclude: /node_modules/,
-      use: ["raw-loader"],
+      use: ["raw-loader", 'glslify-loader'],
+    }),
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: {
+        loader: 'url-loader',
+      },
     });
     return config
   },

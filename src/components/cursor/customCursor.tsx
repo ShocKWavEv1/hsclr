@@ -11,7 +11,7 @@ const Cursor = () => {
 
   return (
     <div id="custom-cursor" className="custom-cursor">
-      <Text variant="MDREGULAR" className="cursor-text" color="black">
+      <Text variant="MDMEDIUM" className="cursor-text" color="black">
         View
       </Text>
     </div>

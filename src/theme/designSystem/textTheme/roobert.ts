@@ -42,32 +42,32 @@ const PPPangram = localFonts({
 });
 
 const baseXLStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "24px",
 };
 
 const baseLGStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "22px",
 };
 
 const baseMDStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "18px",
 };
 
 const baseSMStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "16px",
 };
 
 const baseXSStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "14px",
 };
 
 const baseXSSStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: "Roobert",
   fontSize: "10px",
 };
 
@@ -191,7 +191,7 @@ const XSSSEMIBOLD = defineStyle({
   fontWeight: 600,
 });
 
-export const TextTheme = defineStyleConfig({
+export const Roobert = defineStyleConfig({
   variants: {
     XLLIGHT,
     XLREGULAR,

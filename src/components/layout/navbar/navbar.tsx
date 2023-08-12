@@ -50,14 +50,23 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>
-              <Heading pl="10px" variant="H9SEMIBOLD" color="egg.200">
-                house
-              </Heading>
-              <span>
-                <Heading variant="H9LIGHT" color="egg.200">
-                  color
+              <Box
+                w="auto"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexDirection="row"
+                mt="5px"
+              >
+                <Heading pt="2px" pl="10px" variant="H10MEDIUM" color="egg.200">
+                  house
                 </Heading>
-              </span>
+                <span>
+                  <Heading pt="2px" variant="H10REGULAR" color="egg.200">
+                    color
+                  </Heading>
+                </span>
+              </Box>
             </Box>
           </Box>
           <Box
@@ -67,25 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             alignItems="center"
             justifyContent="flex-end"
           >
-            <Show above="lg">
-              <Stack spacing="20px" direction="row">
-                {navigation.map((item: any) => {
-                  return (
-                    <Heading
-                      key={item.id}
-                      variant="H10REGULAR"
-                      cursor="pointer"
-                      color="egg.200"
-                      onClick={() => router.push(item.path)}
-                      className="navLink"
-                    >
-                      {item.label}
-                    </Heading>
-                  );
-                })}
-              </Stack>
-            </Show>
-            {/*<Drawer isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />*/}
+            <Drawer isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />
           </Box>
         </SimpleGrid>
       </SlideY>
