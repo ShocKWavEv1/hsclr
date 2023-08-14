@@ -1,4 +1,5 @@
-import { Box, Button, Heading } from "@chakra-ui/react";
+import { hattonStyles } from "@/constants/constants";
+import { Box, Button, Heading, Stack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -18,21 +19,17 @@ const Nosotros: React.FC = ({}) => {
       justifyContent="center"
       flexDirection="column"
     >
-      <Box w="100%" h="60vh" bg="primary.500">
-        <Heading variant="H1LIGHT" color="egg.200">
-          Hi housecolor :)
-        </Heading>
-        <Button bg="secondary.500" onClick={() => router.push("/")}>
-          Navigate
-        </Button>
-      </Box>
-      <Box w="100%" h="360vh" bg="secondary.500">
-        <Heading variant="H1LIGHT" color="egg.200">
-          Hi housecolor :)
-        </Heading>
-        <Button bg="secondary.500" onClick={() => router.push("/")}>
-          Navigate
-        </Button>
+      <Box w="100%" h="50vh" bg="primary.500"></Box>
+      <Box p="80px 40px" w="100%" h="auto" bg="black" display="flex">
+        <Stack direction="column" spacing="40px">
+          {hattonStyles.map((item: any, i: number) => {
+            return (
+              <Heading key={i} variant={item.variant} color="primary.500">
+                A song for the dead
+              </Heading>
+            );
+          })}
+        </Stack>
       </Box>
     </Box>
   );

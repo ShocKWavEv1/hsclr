@@ -13,7 +13,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
             <Box w="100%" px="120px">
               <TextMaskY
                 text={[item.number]}
-                variant="H5REGULAR"
+                variant="H5HATTONREGULAR"
                 delay={0.25}
                 isFooter={false}
                 className=""
@@ -22,7 +22,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
               <Box w="100%" pt="40px">
                 <TextMaskY
                   text={[item.title]}
-                  variant="H3REGULAR"
+                  variant="H3HATTONREGULAR"
                   delay={0.25}
                   isFooter={false}
                   className=""

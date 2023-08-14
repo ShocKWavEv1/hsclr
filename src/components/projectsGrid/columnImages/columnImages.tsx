@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -78,13 +78,13 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                   alignItems="flex-start"
                   justifyContent="center"
                   flexDirection="column"
-                  pt="10px"
+                  pt="20px"
                 >
-                  <Text variant="MDMEDIUM" color="egg.200">
+                  <Heading variant="H10HATTONMEDIUM" color="egg.200">
                     {item.title}
-                  </Text>
+                  </Heading>
                   <Text
-                    py="3px"
+                    py="5px"
                     variant="SMMEDIUM"
                     color="egg.200"
                     opacity={0.75}

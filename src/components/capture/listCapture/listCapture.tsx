@@ -18,7 +18,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({}) => {
           viewport={{ once: false }}
           transition={{ duration: 1 }}
         >
-          <Text variant="LGREGULAR" color="egg.200">
+          <Text variant="MDREGULAR" color="egg.200">
             We start where others stop. We question the norm. We don’t repeat
             what has been done.
           </Text>
@@ -29,7 +29,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({}) => {
           viewport={{ once: false }}
           transition={{ duration: 1, delay: 0.25 }}
         >
-          <Text pt="40px" variant="LGREGULAR" color="egg.200">
+          <Text pt="40px" variant="MDREGULAR" color="egg.200">
             United as friends. Unbound by tradition. The best teams are
             independent spirits working in harmony. We start where others stop.
           </Text>

@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 flexDirection="row"
                 mt="5px"
               >
-                <Heading pt="2px" pl="10px" variant="H10MEDIUM" color="egg.200">
+                <Heading pt="2px" pl="7px" variant="H10MEDIUM" color="egg.200">
                   house
                 </Heading>
                 <span>
@@ -76,6 +76,24 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             alignItems="center"
             justifyContent="flex-end"
           >
+            {/*<Show above="xl">
+              <Stack spacing="20px" direction="row">
+                {navigation.map((item: any) => {
+                  return (
+                    <Heading
+                      key={item.id}
+                      variant="H10REGULAR"
+                      cursor="pointer"
+                      color="egg.200"
+                      onClick={() => router.push(item.path)}
+                      className="navLink"
+                    >
+                      {item.label}
+                    </Heading>
+                  );
+                })}
+              </Stack>
+              </Show>*/}
             <Drawer isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />
           </Box>
         </SimpleGrid>

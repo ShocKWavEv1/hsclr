@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -77,13 +77,20 @@ const TeamList: React.FC<TeamListProps> = ({
                   alignItems="flex-start"
                   justifyContent="center"
                   flexDirection="column"
-                  pt="10px"
+                  pt="20px"
                 >
-                  <Text variant="MDREGULAR">{item.name}</Text>
-                  <Text py="3px" variant="XSREGULAR" opacity={0.75}>
+                  <Heading variant="H10HATTONMEDIUM" color="egg.200">
+                    {item.name}
+                  </Heading>
+                  <Text
+                    py="5px"
+                    variant="SMMEDIUM"
+                    color="egg.200"
+                    opacity={0.75}
+                  >
                     {item.role}
                   </Text>
-                  <Text variant="XSREGULAR" opacity={0.75}>
+                  <Text variant="SMMEDIUM" color="egg.200" opacity={0.75}>
                     {item.number}
                   </Text>
                 </Box>

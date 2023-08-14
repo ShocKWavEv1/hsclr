@@ -10,7 +10,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
 }) => {
   const getChars = (word: string) => {
     let chars: any = [];
-    word.split("-").forEach((char, i) => {
+    word.split("").forEach((char, i) => {
       chars.push(
         <motion.span
           custom={[i * 0.03, (word.length - i) * 0.01]}

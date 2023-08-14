@@ -42,10 +42,13 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           </Text>
         </Box>
         <Box w="100%" display="flex" flexDirection="column">
-          <Heading variant="H7REGULAR" color={isDark ? "egg.200" : "black"}>
+          <Heading
+            variant="H7HATTONREGULAR"
+            color={isDark ? "egg.200" : "black"}
+          >
             {title}
           </Heading>
-          <Text variant="LGREGULAR" color={isDark ? "egg.200" : "black"}>
+          <Text variant="MDREGULAR" color={isDark ? "egg.200" : "black"}>
             {brackets}
           </Text>
           {hasButton && (

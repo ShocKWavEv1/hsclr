@@ -12,7 +12,11 @@ const Discover = ({}) => {
         style={{ overflow: "hidden" }}
       >
         <Box className="slider">
-          <Heading className="text-slider" variant="H1REGULAR" color="egg.200">
+          <Heading
+            className="text-slider"
+            variant="H1HATTONMEDIUM"
+            color="egg.200"
+          >
             Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
             reel ↔
           </Heading>

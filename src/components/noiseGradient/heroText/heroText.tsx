@@ -29,7 +29,7 @@ const HeroText: React.FC<HeroTextProps> = ({ textMask }) => {
         flexDirection="column"
         textAlign="center"
       >
-        <TextMask text={textMask} variant="H4REGULAR" delay={0.075} />
+        <TextMask text={textMask} variant="H4HATTONREGULAR" delay={0.075} />
       </Box>
     </Box>
   );

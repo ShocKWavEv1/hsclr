@@ -13,7 +13,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
     >
       <TextMaskY
         text={title}
-        variant="H2REGULAR"
+        variant="H2HATTONREGULAR"
         delay={0.45}
         isFooter={false}
         className=""
@@ -22,7 +22,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
       <Box w="100%" pt="10px">
         <TextMaskY
           text={categories}
-          variant="H9REGULAR"
+          variant="H10REGULAR"
           delay={0.45}
           isFooter={false}
           className=""

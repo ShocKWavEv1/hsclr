@@ -35,7 +35,7 @@ const TextMask: React.FC<TextMaskProps> = ({ text, variant, delay }) => {
             >
               <Heading
                 variant={variant}
-                color="egg.200"
+                color="egg.400"
                 className={
                   index === 0
                     ? "translated-text-1"

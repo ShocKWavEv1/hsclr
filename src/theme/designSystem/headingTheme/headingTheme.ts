@@ -41,6 +41,36 @@ const PPPangram = localFonts({
   ],
 });
 
+const PPHatton = localFonts({
+  src: [
+    {
+      path: '../assets/hatton/PPHatton-Ultralight.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/hatton/PPHatton-Light.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/hatton/PPHatton-Medium.woff',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/hatton/PPHatton-Bold.woff',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/hatton/PPHatton-Ultrabold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+});
+
 const baseH1Styles = {
   fontFamily: PPPangram.style.fontFamily,
   fontSize: "140px",
@@ -451,6 +481,329 @@ const H10BOLDER = defineStyle({
   fontWeight: 900,
 });
 
+
+/* HATTON FONT VARIANTS */
+
+const baseHattonH1Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "140px",
+};
+
+const baseHattonH2Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "110px",
+};
+
+const baseHattonH3Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "96px",
+};
+
+const baseHattonH4Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "82px",
+};
+
+const baseHattonH5Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "68px",
+};
+
+const baseHattonH6Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "54px",
+};
+
+const baseHattonH7Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "40px",
+};
+
+const baseHattonH8Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "32px",
+};
+
+const baseHattonH9Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "26px",
+};
+
+const baseHattonH10Styles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "20px",
+};
+
+/* H1 VARIANT */
+
+const H1HATTONLIGHT = defineStyle({
+  ...baseHattonH1Styles,
+  fontWeight: 300,
+});
+
+const H1HATTONREGULAR = defineStyle({
+  ...baseHattonH1Styles,
+  fontWeight: 400,
+});
+
+const H1HATTONMEDIUM = defineStyle({
+  ...baseHattonH1Styles,
+  fontWeight: 500,
+});
+
+const H1HATTONBOLD = defineStyle({
+  ...baseHattonH1Styles,
+  fontWeight: 600,
+});
+
+const H1HATTONBOLDER = defineStyle({
+  ...baseHattonH1Styles,
+  fontWeight: 700,
+});
+
+/* H2 VARIANT */
+
+const H2HATTONLIGHT = defineStyle({
+  ...baseHattonH2Styles,
+  fontWeight: 300,
+});
+
+const H2HATTONREGULAR = defineStyle({
+  ...baseHattonH2Styles,
+  fontWeight: 400,
+});
+
+const H2HATTONMEDIUM = defineStyle({
+  ...baseHattonH2Styles,
+  fontWeight: 500,
+});
+
+const H2HATTONBOLD = defineStyle({
+  ...baseHattonH2Styles,
+  fontWeight: 600,
+});
+
+const H2HATTONBOLDER = defineStyle({
+  ...baseHattonH2Styles,
+  fontWeight: 700,
+});
+
+/* H3 VARIANT */
+
+const H3HATTONLIGHT = defineStyle({
+  ...baseHattonH3Styles,
+  fontWeight: 300,
+});
+
+const H3HATTONREGULAR = defineStyle({
+  ...baseHattonH3Styles,
+  fontWeight: 400,
+});
+
+const H3HATTONMEDIUM = defineStyle({
+  ...baseHattonH3Styles,
+  fontWeight: 500,
+});
+
+const H3HATTONBOLD = defineStyle({
+  ...baseHattonH3Styles,
+  fontWeight: 600,
+});
+
+const H3HATTONBOLDER = defineStyle({
+  ...baseHattonH3Styles,
+  fontWeight: 700,
+});
+
+/* H4 VARIANT */
+
+const H4HATTONLIGHT = defineStyle({
+  ...baseHattonH4Styles,
+  fontWeight: 300,
+});
+
+const H4HATTONREGULAR = defineStyle({
+  ...baseHattonH4Styles,
+  fontWeight: 400,
+});
+
+const H4HATTONMEDIUM = defineStyle({
+  ...baseHattonH4Styles,
+  fontWeight: 500,
+});
+
+const H4HATTONBOLD = defineStyle({
+  ...baseHattonH4Styles,
+  fontWeight: 600,
+});
+
+const H4HATTONBOLDER = defineStyle({
+  ...baseHattonH4Styles,
+  fontWeight: 700,
+});
+
+/* H5 VARIANT */
+
+const H5HATTONLIGHT = defineStyle({
+  ...baseHattonH5Styles,
+  fontWeight: 300,
+});
+
+const H5HATTONREGULAR = defineStyle({
+  ...baseHattonH5Styles,
+  fontWeight: 400,
+});
+
+const H5HATTONMEDIUM = defineStyle({
+  ...baseHattonH5Styles,
+  fontWeight: 500,
+});
+
+const H5HATTONBOLD = defineStyle({
+  ...baseHattonH5Styles,
+  fontWeight: 600,
+});
+
+const H5HATTONBOLDER = defineStyle({
+  ...baseHattonH5Styles,
+  fontWeight: 700,
+});
+
+/* H6 VARIANT */
+
+const H6HATTONLIGHT = defineStyle({
+  ...baseHattonH6Styles,
+  fontWeight: 300,
+});
+
+const H6HATTONREGULAR = defineStyle({
+  ...baseHattonH6Styles,
+  fontWeight: 400,
+});
+
+const H6HATTONMEDIUM = defineStyle({
+  ...baseHattonH6Styles,
+  fontWeight: 500,
+});
+
+const H6HATTONBOLD = defineStyle({
+  ...baseHattonH6Styles,
+  fontWeight: 600,
+});
+
+const H6HATTONBOLDER = defineStyle({
+  ...baseHattonH6Styles,
+  fontWeight: 700,
+});
+
+/* H7 VARIANT */
+
+const H7HATTONLIGHT = defineStyle({
+  ...baseHattonH7Styles,
+  fontWeight: 300,
+});
+
+const H7HATTONREGULAR = defineStyle({
+  ...baseHattonH7Styles,
+  fontWeight: 400,
+});
+
+const H7HATTONMEDIUM = defineStyle({
+  ...baseHattonH7Styles,
+  fontWeight: 500,
+});
+
+const H7HATTONBOLD = defineStyle({
+  ...baseHattonH7Styles,
+  fontWeight: 600,
+});
+
+const H7HATTONBOLDER = defineStyle({
+  ...baseHattonH7Styles,
+  fontWeight: 700,
+});
+
+/* H8 VARIANT */
+
+const H8HATTONLIGHT = defineStyle({
+  ...baseHattonH8Styles,
+  fontWeight: 300,
+});
+
+const H8HATTONREGULAR = defineStyle({
+  ...baseHattonH8Styles,
+  fontWeight: 400,
+});
+
+const H8HATTONMEDIUM = defineStyle({
+  ...baseHattonH8Styles,
+  fontWeight: 500,
+});
+
+const H8HATTONBOLD = defineStyle({
+  ...baseHattonH8Styles,
+  fontWeight: 600,
+});
+
+const H8HATTONBOLDER = defineStyle({
+  ...baseHattonH8Styles,
+  fontWeight: 700,
+});
+
+/* H9 VARIANT */
+
+const H9HATTONLIGHT = defineStyle({
+  ...baseHattonH9Styles,
+  fontWeight: 300,
+});
+
+const H9HATTONREGULAR = defineStyle({
+  ...baseHattonH9Styles,
+  fontWeight: 400,
+});
+
+const H9HATTONMEDIUM = defineStyle({
+  ...baseHattonH9Styles,
+  fontWeight: 500,
+});
+
+const H9HATTONBOLD = defineStyle({
+  ...baseHattonH9Styles,
+  fontWeight: 600,
+});
+
+const H9HATTONBOLDER = defineStyle({
+  ...baseHattonH9Styles,
+  fontWeight: 700,
+});
+
+/* H10 VARIANT */
+
+const H10HATTONLIGHT = defineStyle({
+  ...baseHattonH10Styles,
+  fontWeight: 300,
+});
+
+const H10HATTONREGULAR = defineStyle({
+  ...baseHattonH10Styles,
+  fontWeight: 400,
+});
+
+const H10HATTONMEDIUM = defineStyle({
+  ...baseHattonH10Styles,
+  fontWeight: 500,
+});
+
+const H10HATTONBOLD = defineStyle({
+  ...baseHattonH10Styles,
+  fontWeight: 600,
+});
+
+const H10HATTONBOLDER = defineStyle({
+  ...baseHattonH10Styles,
+  fontWeight: 700,
+});
+
 export const HeadingTheme = defineStyleConfig({
   variants: {
     H1THIN,
@@ -523,5 +876,56 @@ export const HeadingTheme = defineStyleConfig({
     H10SEMIBOLD,
     H10BOLD,
     H10BOLDER,
+    /* HATTON FONT VARIANTS */
+    H1HATTONLIGHT,
+    H1HATTONREGULAR,
+    H1HATTONMEDIUM,
+    H1HATTONBOLD,
+    H1HATTONBOLDER,
+    H2HATTONLIGHT,
+    H2HATTONREGULAR,
+    H2HATTONMEDIUM,
+    H2HATTONBOLD,
+    H2HATTONBOLDER,
+    H3HATTONLIGHT,
+    H3HATTONREGULAR,
+    H3HATTONMEDIUM,
+    H3HATTONBOLD,
+    H3HATTONBOLDER,
+    H4HATTONLIGHT,
+    H4HATTONREGULAR,
+    H4HATTONMEDIUM,
+    H4HATTONBOLD,
+    H4HATTONBOLDER,
+    H5HATTONLIGHT,
+    H5HATTONREGULAR,
+    H5HATTONMEDIUM,
+    H5HATTONBOLD,
+    H5HATTONBOLDER,
+    H6HATTONLIGHT,
+    H6HATTONREGULAR,
+    H6HATTONMEDIUM,
+    H6HATTONBOLD,
+    H6HATTONBOLDER,
+    H7HATTONLIGHT,
+    H7HATTONREGULAR,
+    H7HATTONMEDIUM,
+    H7HATTONBOLD,
+    H7HATTONBOLDER,
+    H8HATTONLIGHT,
+    H8HATTONREGULAR,
+    H8HATTONMEDIUM,
+    H8HATTONBOLD,
+    H8HATTONBOLDER,
+    H9HATTONLIGHT,
+    H9HATTONREGULAR,
+    H9HATTONMEDIUM,
+    H9HATTONBOLD,
+    H9HATTONBOLDER,
+    H10HATTONLIGHT,
+    H10HATTONREGULAR,
+    H10HATTONMEDIUM,
+    H10HATTONBOLD,
+    H10HATTONBOLDER,
   },
 });

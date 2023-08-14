@@ -52,7 +52,12 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
         <div className="reveal">
           <div ref={triggerRef}>
             {text.split("").map((letter, index) => (
-              <Text as="span" key={index} variant="XLREGULAR" color="egg.200">
+              <Heading
+                as="span"
+                key={index}
+                variant="H4HATTONREGULAR"
+                color="egg.200"
+              >
                 <span
                   className="reveal-text"
                   ref={setlettersRef}
@@ -60,7 +65,7 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
                 >
                   {letter}
                 </span>
-              </Text>
+              </Heading>
             ))}
           </div>
         </div>

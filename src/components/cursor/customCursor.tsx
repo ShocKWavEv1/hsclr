@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { Text } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { customCursor } from "@/constants/constants";
 const Cursor = () => {
   const router = useRouter();
@@ -11,9 +11,9 @@ const Cursor = () => {
 
   return (
     <div id="custom-cursor" className="custom-cursor">
-      <Text variant="MDMEDIUM" className="cursor-text" color="black">
+      <Heading variant="H9HATTONREGULAR" className="cursor-text" color="black">
         View
-      </Text>
+      </Heading>
     </div>
   );
 };
