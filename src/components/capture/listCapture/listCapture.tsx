@@ -1,8 +1,16 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { ListCaptureProps } from "./model";
 import { motion } from "framer-motion";
+import TextMaskY from "@/components/animations/textY/textY";
 
-const ListCapture: React.FC<ListCaptureProps> = ({}) => {
+const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
   return (
     <Box
       w="100%"
@@ -11,8 +19,70 @@ const ListCapture: React.FC<ListCaptureProps> = ({}) => {
       justifyContent="center"
       flexDirection="column"
     >
-      <Box w="80%" h="auto" mt="40px">
-        <motion.div
+      <Box w="80%" h="auto" mt="80px">
+        <Box w="100%">
+          <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 3]} spacing="50px">
+            {services.map((item: any, i: number) => {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 1 }}
+                >
+                  <Box
+                    w="100%"
+                    h="auto"
+                    display="flex"
+                    alignItems="flex-start"
+                    justifyContent="flex-start"
+                    flexDirection="column"
+                    p="20px"
+                  >
+                    <TextMaskY
+                      text={[item.number]}
+                      variant="H7HATTONREGULAR"
+                      once
+                      delay={0.45}
+                      isFooter={false}
+                      className=""
+                    />
+                    <Box pt="20px">
+                      <TextMaskY
+                        text={[item.title]}
+                        variant="H8HATTONREGULAR"
+                        once={false}
+                        delay={0.45}
+                        isFooter={false}
+                        className=""
+                      />
+                    </Box>
+                    <Box pt="50px">
+                      <Stack direction="column" spacing="10px">
+                        {item.bullets.map((bullet: any, j: number) => {
+                          return (
+                            <Text key={j} variant="MDMEDIUM" color="egg.200">
+                              {bullet}
+                            </Text>
+                          );
+                        })}
+                      </Stack>
+                    </Box>
+                  </Box>
+                </motion.div>
+              );
+            })}
+          </SimpleGrid>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default ListCapture;
+
+/*        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -51,10 +121,4 @@ const ListCapture: React.FC<ListCaptureProps> = ({}) => {
               Our services →
             </Button>
           </Box>
-        </motion.div>
-      </Box>
-    </Box>
-  );
-};
-
-export default ListCapture;
+        </motion.div>*/

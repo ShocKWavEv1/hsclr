@@ -5,9 +5,9 @@ import Synopsis from "@/components/projects/components/synopsis/synopsis";
 import VideoPlayer from "@/components/projects/components/videoPlayer/videoPlayer";
 import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   useEffect(() => {
     window.scroll({ top: 0 });
     customCursor();

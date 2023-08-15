@@ -276,7 +276,7 @@ ul{
 	height: 33%;
 	width: 100%;
 	position: relative;
-	border-radius: 1vw;
+	border-radius: 0vw;
 	overflow: hidden;
 }
 
@@ -477,4 +477,43 @@ ul{
   background-color: #000000;
   transform-origin: top;
   z-index: 4;
+}
+
+.project{
+  border-top: 1px solid #FEF8DC;
+  padding-top: .8vw;
+  padding-bottom: .8vw;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .thumbnail-text{
+  font-size: 4vw;
+  margin: 0px;
+}
+
+.project .thumbnail-text:nth-of-type(1){
+  margin-right: 0.75vw;
+}
+
+.project .thumbnail-text:nth-of-type(2){
+  margin-left: 0.75vw;
+}
+
+.project:last-of-type{
+  border-bottom: 1px solid #FEF8DC;
+}
+
+.project .imgContainer{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 0;
+}
+
+.project img{
+  width: 10vw;
 }

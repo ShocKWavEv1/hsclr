@@ -67,7 +67,7 @@ export default function App({
       <Fonts />
       <Cursor />
       <Preloader />
-      <LoadingBar ref={LoadingBarRef} height={3} color="#BC162A" />
+      <LoadingBar ref={LoadingBarRef} height={3} color="#ff98a2" />
       <PageTransition router={router}>
         <ScrollProvider>
           <Layout>

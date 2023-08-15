@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { NavbarProps } from "./model";
-import circles from "../../../static/logo/double_circles.svg";
+import circles from "../../../static/logo/multiple_circles.svg";
 import { navigation } from "./constants";
 import SlideY from "@/components/animations/slideY/slideY";
 import Drawer from "./drawer/drawer";
@@ -47,6 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
+                transform="rotate(90deg)"
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>

@@ -2,12 +2,16 @@ import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import { MenuBodyProps } from "./model";
 import { motion } from "framer-motion";
 import { blur, translate } from "../../drawer/animation";
+import { useRouter } from "next/router";
 
 const MenuBody: React.FC<MenuBodyProps> = ({
   links,
   selectedLink,
   setSelectedLink,
+  setOpen,
 }) => {
+  const router = useRouter();
+
   const getChars = (word: string) => {
     let chars: any = [];
     word.split("").forEach((char, i) => {
@@ -44,6 +48,10 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                 display="flex"
                 flexDirection="row"
                 cursor="pointer"
+                onClick={() => {
+                  setOpen();
+                  router.push(item.path);
+                }}
               >
                 <Text as="span" variant="MDMEDIUM" color="egg.200">
                   <motion.p
@@ -78,7 +86,9 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                         color="egg.200"
                         mb="22px"
                         mr="10px"
-                      >{`[ ${index + 1} ]`}</Text>
+                      >
+                        {`[ ${index + 1} ]`}
+                      </Text>
                     </Box>
                     {getChars(item.label)}
                   </motion.p>

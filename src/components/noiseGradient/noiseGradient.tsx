@@ -4,7 +4,7 @@ import { NoiseGradientProps } from "./model";
 import { extraDescription, textMask } from "./constants";
 import HeroFooter from "./heroFooter/heroFooter";
 import HeroText from "./heroText/heroText";
-import Skech from "../sketch/sketch";
+import Sketch from "../sketch/sketch";
 
 const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
   return (
@@ -17,7 +17,7 @@ const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
       position="relative"
     >
       <Suspense fallback>
-        <Skech />
+        <Sketch />
       </Suspense>
       <HeroText textMask={textMask} />
       <HeroFooter options={extraDescription} />

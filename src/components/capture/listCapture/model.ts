@@ -1,1 +1,3 @@
-export interface ListCaptureProps {}
+export interface ListCaptureProps {
+    services: any;
+}

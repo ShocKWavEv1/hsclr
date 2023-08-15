@@ -29,6 +29,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ links, isOpen, setOpen }) => {
           links={links}
           selectedLink={selectedLink}
           setSelectedLink={setSelectedLink}
+          setOpen={() => setOpen()}
         />
         <MenuFooter />
       </motion.div>

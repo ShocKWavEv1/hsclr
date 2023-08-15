@@ -25,7 +25,7 @@ const Clients: React.FC<ClientsProps> = ({}) => {
         alignItems="center"
         justifyContent="flex-start"
         flexDirection="column"
-        p="80px 40px"
+        p="120px 40px"
         position="relative"
         className="bg-noise"
       >
@@ -44,7 +44,7 @@ const Clients: React.FC<ClientsProps> = ({}) => {
         <Box w="680px" pt="50px" textAlign="center">
           <TextMaskY
             text={clients}
-            variant="H7REGULAR"
+            variant="H7HATTONREGULAR"
             className=""
             delay={0.25}
             isFooter={false}

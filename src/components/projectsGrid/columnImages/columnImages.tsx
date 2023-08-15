@@ -46,14 +46,13 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
                 <Box
                   key={i}
                   w="100%"
-                  h="72vh"
+                  h="auto"
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
                   flexDirection="column"
                   overflow="hidden"
                   position="relative"
-                  borderRadius="1vw"
                 >
                   <Box
                     w="100%"

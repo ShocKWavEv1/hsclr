@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import SectionHeader from "../sectionHeader/sectionHeader";
-import { title } from "./constants";
+import { services, title } from "./constants";
 import ListCapture from "./listCapture/listCapture";
 import { CaptureProps } from "./model";
 
@@ -23,10 +23,10 @@ const Capture: React.FC<CaptureProps> = ({}) => {
         section="capture"
         title={title}
         brackets={"[ we are design - driven ]"}
-        hasButton={false}
+        hasButton
         isDark={true}
       />
-      <ListCapture />
+      <ListCapture services={services} />
     </Box>
   );
 };

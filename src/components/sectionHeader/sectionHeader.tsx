@@ -26,7 +26,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           justifyContent="flex-start"
           flexDirection="row"
         >
-          <Box pt="15px">
+          <Box pt="2px">
             <TriangleRightIcon color={isDark ? "#FEF8DC" : "#000"} />
           </Box>
           <Text
@@ -36,7 +36,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             opacity={0.65}
             lineHeight={2.65}
             pl="2px"
-            pt="4px"
+            mt="-8px"
           >
             {section}
           </Text>
