@@ -23,7 +23,7 @@ const Capture: React.FC<CaptureProps> = ({}) => {
         section="capture"
         title={title}
         brackets={"[ we are design - driven ]"}
-        hasButton
+        hasButton={false}
         isDark={true}
       />
       <ListCapture services={services} />
