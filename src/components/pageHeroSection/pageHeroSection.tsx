@@ -1,11 +1,11 @@
 import TextMaskY from "@/components/animations/textY/textY";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import { HeroTextWorkProps } from "./model";
-import arrow_down from "../../../../static/bg/arrow_scroll.png";
+import { PageHeroSectionProps } from "./model";
+import arrow_down from "../../static/bg/arrow_scroll.png";
 import { motion } from "framer-motion";
 
-const HeroWork: React.FC<HeroTextWorkProps> = ({}) => {
+const PageHeroSection: React.FC<PageHeroSectionProps> = ({ text }) => {
   return (
     <Box
       as="section"
@@ -24,7 +24,7 @@ const HeroWork: React.FC<HeroTextWorkProps> = ({}) => {
       p="0px 80px 30px 80px"
     >
       <TextMaskY
-        text={["We choose a different →", "starting point."]}
+        text={text}
         variant="H4HATTONREGULAR"
         delay={0.25}
         once={true}
@@ -53,4 +53,4 @@ const HeroWork: React.FC<HeroTextWorkProps> = ({}) => {
   );
 };
 
-export default HeroWork;
+export default PageHeroSection;

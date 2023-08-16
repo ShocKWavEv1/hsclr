@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/sketch/sketch.jsx",
-    "src/components/sketch/sketch.jsx"
-, "src/components/workView/sketchWork/sketchWork.jsx"  ],
+    "src/components/sketch/sketch.jsx",
+    "src/components/workView/sketchWork/sketchWork.jsx", ],
   "exclude": ["node_modules"]
 }

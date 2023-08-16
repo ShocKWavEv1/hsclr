@@ -1,10 +1,10 @@
 import { Box } from "@chakra-ui/react";
 import { Suspense } from "react";
-import { HeroProps } from "./model";
-import SketchWork from "../sketchWork/sketchWork";
+import { HeroServicesProps } from "./model";
+import SketchServices from "../SketchServices/SketchServices";
 import PageHeroSection from "@/components/pageHeroSection/pageHeroSection";
 
-const Hero: React.FC<HeroProps> = ({}) => {
+const HeroServices: React.FC<HeroServicesProps> = ({}) => {
   return (
     <Box
       w="100%"
@@ -14,11 +14,13 @@ const Hero: React.FC<HeroProps> = ({}) => {
       position="relative"
     >
       <Suspense fallback>
-        <SketchWork />
+        <SketchServices />
       </Suspense>
-      <PageHeroSection text={["We choose a different", "→ starting point."]} />
+      <PageHeroSection
+        text={["We help brands be their", "most inspiring selves."]}
+      />
     </Box>
   );
 };
 
-export default Hero;
+export default HeroServices;

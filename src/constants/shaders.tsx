@@ -1,3 +1,23 @@
+export const ORANGE_SHADER = `vec3 baseFirst = vec3(238./255., 127./255., 39./255.);
+vec3 accent =  vec3(0./255., 0./255., 0./255.);
+vec3 baseSecond =  vec3(255./255., 152./255., 162./255.);
+vec3 baseThird =  vec3(238./255., 127./255., 39./255.);`;
+
+export const MINT_SHADER = `vec3 baseFirst = vec3(77./255., 36./255., 174./255.);
+vec3 accent =  vec3(0./255., 0./255., 0./255.);
+vec3 baseSecond =  vec3(139./255., 236./255., 236./255.);
+vec3 baseThird =  vec3(0./255., 98./255., 212./255.);`;
+
+export const GRASS_SHADER = `vec3 baseFirst = vec3(6./255., 37./255., 15./255.);
+vec3 accent =  vec3(0./255., 0./255., 0./255.);
+vec3 baseSecond =  vec3(6./255., 223./255., 158./255.);
+vec3 baseThird =  vec3(6./255., 37./255., 15./255.);`;
+
+export const WATERMELON_SHADER = `vec3 baseFirst = vec3(238./255., 46./255., 49./255.);
+vec3 accent =  vec3(0./255., 0./255., 0./255.);
+vec3 baseSecond =  vec3(255./255., 217./255., 217./255.);
+vec3 baseThird =  vec3(238./255., 46./255., 49./255.);`;
+
 export const vertShader = `    
     uniform float time;
     varying vec2 vUv;
@@ -19,7 +39,8 @@ export const vertShader = `
     }
 `;
 
-export const fragShader = `
+export const getFragShader = (CURRENT_SHADER: any) => {
+  return `
     uniform float time;
     uniform float progress;
     uniform sampler2D texture1;
@@ -70,10 +91,7 @@ export const fragShader = `
     }
 
     void main()	{
-        vec3 baseFirst = vec3(77./255., 36./255., 174./255.);
-        vec3 accent =  vec3(0./255., 0./255., 0./255.);
-        vec3 baseSecond =  vec3(139./255., 236./255., 236./255.);
-        vec3 baseThird =  vec3(0./255., 98./255., 212./255.);
+        ${CURRENT_SHADER}
 
         float n = noise(vPosition +time);
         // vec3 color1 = vec3(1.,0.,0.);
@@ -91,6 +109,7 @@ export const fragShader = `
         // vec2 newUV = (vUv - vec2(0.5))*resolution.zw + vec2(0.5);
         gl_FragColor = vec4(vec3(secondBaseColor),1.);
     }
-`;
+  `;
+};
 
 /* MONOPO BLUE rgb(1, 127, 247) rgb(101, 215, 225)*/
