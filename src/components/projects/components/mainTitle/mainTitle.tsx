@@ -8,7 +8,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
       w="100%"
       h="auto"
       bg="black"
-      p="210px 80px 60px 80px"
+      p="240px 80px 60px 80px"
       placeItems="center"
     >
       <TextMaskY

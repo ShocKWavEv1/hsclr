@@ -16,7 +16,9 @@ const HeroTeam: React.FC<HeroProps> = ({}) => {
       <Suspense fallback>
         <SketchTeam />
       </Suspense>
-      <PageHeroSection text={["We seek ↔", "unique perspectives."]} />
+      <PageHeroSection
+        text={["We are a collective ↔", "for minded & creative talents."]}
+      />
     </Box>
   );
 };

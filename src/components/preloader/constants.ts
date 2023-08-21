@@ -33,7 +33,6 @@ export const curtain = () => {
         "body",
         {
           overflow: "auto",
-          height: "auto"
         },
       )
       .to(".preloader", {

@@ -20,7 +20,7 @@ const SketchWork = () => {
     );
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-        const canvasHeight = window.innerHeight * 0.6;
+    const canvasHeight = 450; // Set the canvas height here
     renderer.setSize(window.innerWidth, canvasHeight);
 
     // Create shader materials using the imported shaders
@@ -69,7 +69,7 @@ const SketchWork = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ width: "100vw", height: "100vh" }} />;
+  return <canvas ref={canvasRef} style={{ width: "100vw", height: "450px" }} />;
 };
 
 export default SketchWork;

@@ -19,8 +19,8 @@ const Work: React.FC = () => {
       <Box w="100%" p="100px 80px 0px 80px">
         <SectionHeader
           section="work"
-          title="Every project is a chance to try something new"
-          brackets={"[  with a fresh perspective ]"}
+          title="Every project is a chance to try something new with a fresh perspective"
+          brackets={"[  browse our projects ]"}
           hasButton={false}
           isDark
         />

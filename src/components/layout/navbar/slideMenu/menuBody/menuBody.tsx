@@ -36,7 +36,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
       w="100%"
       h="auto"
       bg="black"
-      p="140px 40px 20px 40px"
+      p="180px 40px 20px 40px"
       onClick={(e: any) => e.stopPropagation()}
     >
       <Box className="nav-grid">

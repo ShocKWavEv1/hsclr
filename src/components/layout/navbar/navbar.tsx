@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { NavbarProps } from "./model";
-import circles from "../../../static/logo/multiple_circles.svg";
+import circles from "../../../static/logo/taxo.svg";
 import { navigation } from "./constants";
 import SlideY from "@/components/animations/slideY/slideY";
 import Drawer from "./drawer/drawer";
@@ -42,31 +42,14 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               onClick={() => router.push("/")}
             >
               <Box
-                w="35px"
+                w="60px"
                 mt="2px"
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
-                transform="rotate(90deg)"
+                transform="rotate(270deg)"
               >
                 <Image priority src={circles} alt="housecolor logo" />
-              </Box>
-              <Box
-                w="auto"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                flexDirection="row"
-                mt="5px"
-              >
-                <Heading pt="2px" pl="7px" variant="H10MEDIUM" color="egg.200">
-                  house
-                </Heading>
-                <span>
-                  <Heading pt="2px" variant="H10REGULAR" color="egg.200">
-                    color
-                  </Heading>
-                </span>
               </Box>
             </Box>
           </Box>

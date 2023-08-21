@@ -516,3 +516,31 @@ ul{
 .project img{
   width: 10vw;
 }
+
+.scroll-section-outer {
+  overflow-x: hidden;
+  background-color: #BC162A;
+}
+
+.scroll-section-inner {
+  height: auto;
+  width: 500vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: aqua;
+}
+
+.scroll-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  background-color: bisque;
+}
+
+.scroll-manifesto-title {
+  display: block;
+}

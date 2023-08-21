@@ -3,17 +3,17 @@ export const title =
 
 export const services = [
   { 
-    number: "[ 01 ]", 
+    number: "[ 1 ]", 
     title: "Product design", 
     bullets: ["→   Mobile & Web Apps", "→   User Experience", "→   Data User"] 
   },
   { 
-    number: "[ 02 ]", 
+    number: "[ 2 ]", 
     title: "Visual design", 
     bullets: ["→   Mobile & Web Apps", "→   User Experience", "→   Data User"] 
   },
   { 
-    number: "[ 03 ]", 
+    number: "[ 3 ]", 
     title: "Audio design", 
     bullets: ["→   Mobile & Web Apps", "→   User Experience", "→   Data User"] 
   },

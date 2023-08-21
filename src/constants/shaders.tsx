@@ -3,10 +3,10 @@ vec3 accent =  vec3(0./255., 0./255., 0./255.);
 vec3 baseSecond =  vec3(255./255., 152./255., 162./255.);
 vec3 baseThird =  vec3(238./255., 127./255., 39./255.);`;
 
-export const MINT_SHADER = `vec3 baseFirst = vec3(77./255., 36./255., 174./255.);
+export const MINT_SHADER = `vec3 baseFirst = vec3(79./255., 38./255., 233./255.);
 vec3 accent =  vec3(0./255., 0./255., 0./255.);
-vec3 baseSecond =  vec3(139./255., 236./255., 236./255.);
-vec3 baseThird =  vec3(0./255., 98./255., 212./255.);`;
+vec3 baseSecond =  vec3(255./255., 152./255., 162./255.);
+vec3 baseThird =  vec3(79./255., 38./255., 233./255.);`;
 
 export const GRASS_SHADER = `vec3 baseFirst = vec3(6./255., 37./255., 15./255.);
 vec3 accent =  vec3(0./255., 0./255., 0./255.);

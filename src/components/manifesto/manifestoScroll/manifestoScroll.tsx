@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ManifestoScrollProps } from "./model";
 import { Box, Heading, Text } from "@chakra-ui/react";
-import circles from "../../../static/logo/double_circles.svg";
+import circles from "../../../static/logo/taxo.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -74,6 +74,8 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
           display="flex"
           alignItems="center"
           justifyContent="flex-end"
+          pr="20px"
+          pt="60px"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -85,7 +87,7 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
               delay: 0.75,
             }}
           >
-            <Box w="50px" pt="60px" pointerEvents="all">
+            <Box w="60px" pointerEvents="all" transform="rotate(270deg)">
               <Image
                 style={{ width: "100%" }}
                 priority

@@ -42,7 +42,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
                   >
                     <TextMaskY
                       text={[item.number]}
-                      variant="H7HATTONREGULAR"
+                      variant="H8HATTONREGULAR"
                       once
                       delay={0.45}
                       isFooter={false}

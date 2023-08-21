@@ -31,7 +31,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({ text }) => {
         isFooter={false}
         className=""
       />
-      <Box cursor="pointer" position="absolute" bottom={"40px"} right={"80px"}>
+      <Box cursor="pointer" position="absolute" bottom={"50px"} right={"80px"}>
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}

@@ -17,7 +17,7 @@ const HeroServices: React.FC<HeroServicesProps> = ({}) => {
         <SketchServices />
       </Suspense>
       <PageHeroSection
-        text={["We help brands be their", "most inspiring selves."]}
+        text={["We build brands across", "branding & communications"]}
       />
     </Box>
   );
