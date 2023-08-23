@@ -42,7 +42,7 @@ const Preloader: React.FC<PreloaderProps> = () => {
         >
           <Image priority src={circles} alt="housecolor logo" />
   </Box>*/}
-        <Box pt="25px">
+        <Box>
           <TextMaskY
             text={phrases}
             variant="H9HATTONREGULAR"
