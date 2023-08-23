@@ -7,6 +7,7 @@ import SectionHeader from "@/components/sectionHeader/sectionHeader";
 import ServicesGrid from "@/components/servicesView/servicesGrid/servicesGrid";
 import Discover from "@/components/discover/discover";
 import Reel from "@/components/reel/reel";
+import Clients from "@/components/clients/clients";
 
 const Services: React.FC = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Services: React.FC = () => {
     <Box w="100%" h="auto" overflowX="hidden">
       <HeroServices />
       <ServicesGrid />
+      <Clients />
       <Discover />
       <Reel />
       <Footer />

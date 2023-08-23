@@ -6,7 +6,6 @@ import {
   customCursor,
   scrollBackgroundColor,
   scrollColumnImages,
-  scrollDiscoverReelText,
   scrollDiscoverText,
   scrollHeroText,
 } from "@/constants/constants";
@@ -24,10 +23,10 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+    window.scroll({ top: 0 });
     customCursor();
     scrollHeroText();
     scrollDiscoverText();
-    scrollDiscoverReelText();
     scrollBackgroundColor();
     scrollColumnImages();
   }, []);

@@ -65,13 +65,13 @@ const HeroFooter: React.FC<HeroFooterProps> = ({ options }) => {
               {options.map((item: any) => {
                 return (
                   <Box key={item.title} textAlign="right">
-                    <Text variant="SMMEDIUM" color="egg.200">
+                    <Text variant="SMMEDIUM" color="egg.400">
                       {item.title}
                     </Text>
                     <Text
                       as="span"
                       variant="XSMEDIUM"
-                      color="egg.200"
+                      color="egg.400"
                       opacity={0.75}
                     >
                       {item.label}

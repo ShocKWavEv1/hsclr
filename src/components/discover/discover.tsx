@@ -15,7 +15,7 @@ const Discover = ({}) => {
           <Heading
             className="text-slider"
             variant="H1HATTONMEDIUM"
-            color="egg.200"
+            color="egg.400"
           >
             Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
             reel ↔

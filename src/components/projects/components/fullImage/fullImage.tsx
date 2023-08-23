@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { FullImageProps } from "./model";
+import ImageReveal from "@/components/imageReveal/imageReveal";
 
 const FullImage: React.FC<FullImageProps> = ({ image }) => {
   return (
@@ -12,15 +12,7 @@ const FullImage: React.FC<FullImageProps> = ({ image }) => {
         viewport={{ once: false }}
         transition={{ duration: 1 }}
       >
-        <Image
-          priority
-          sizes="100vw"
-          width={0}
-          height={0}
-          src="/static/images/projects/monopo/main.jpg"
-          alt="mainImage"
-          style={{ width: "100%", objectFit: "cover" }}
-        />
+        <ImageReveal src="/static/images/projects/monopo/main.jpg" />
       </motion.div>
     </Box>
   );

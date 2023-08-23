@@ -83,7 +83,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
                         duration: 0.75,
                       }}
                     >
-                      <Text variant="LGREGULAR" color="egg.200">
+                      <Text variant="LGREGULAR" color="egg.400">
                         {item.description}
                       </Text>
                     </motion.div>

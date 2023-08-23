@@ -62,7 +62,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
                       <Stack direction="column" spacing="10px">
                         {item.bullets.map((bullet: any, j: number) => {
                           return (
-                            <Text key={j} variant="MDMEDIUM" color="egg.200">
+                            <Text key={j} variant="MDMEDIUM" color="egg.400">
                               {bullet}
                             </Text>
                           );

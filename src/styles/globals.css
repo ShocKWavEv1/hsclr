@@ -100,7 +100,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FEF8DC;
+  background-color: #F9EBBB;
   transform: translate(-50%, -50%);
 }
 
@@ -130,7 +130,7 @@ ul{
   width: 100%;
   height: 1px;
   border-radius: 2px;
-  background-color: #FEF8DC;
+  background-color: #F9EBBB;
   bottom: -4px;
   left: 0;
   transform-origin: right;
@@ -184,7 +184,7 @@ ul{
   content: '';  
   width: 50px;
   height: 1px;
-  background: #FEF8DC;
+  background: #F9EBBB;
   position: absolute;
   top: 0;
   left: 0;
@@ -236,13 +236,46 @@ ul{
   overflow: hidden;
 }
 
+.slider-manifesto-live, .slider-manifesto-club{
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .slider .text-slider{
   position: relative;
   margin: 0px;
   font-weight: 400;
-  color: #FEF8DC;
+  color: #F9EBBB;
   font-size: 230px;
   margin-left: 500px;
+}
+
+.slider-manifesto-live .text-slider-manifesto-live {
+  position: relative;
+  margin: 0px;
+  font-weight: 300;
+  color: #F9EBBB;
+  font-size: 180px;
+}
+
+.slider-manifesto-live .text-slider-manifesto-live-2{
+  position: relative;
+  margin: 0px;
+  font-weight: 300;
+  color: #F9EBBB;
+  font-size: 180px;
+}
+
+.slider-manifesto-club .text-slider-manifesto-club{
+  position: relative;
+  margin: 0px;
+  font-weight: 300;
+  color: #F9EBBB;
+  font-size: 180px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #F9EBBB;
 }
 
 .gallery {
@@ -307,7 +340,7 @@ ul{
 .stroke-text {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #FEF8DC;
+  -webkit-text-stroke-color: #F9EBBB;
 }
 
 .stairs{
@@ -389,7 +422,7 @@ ul{
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #FEF8DC;
+  background-color: #F9EBBB;
   position: relative;
   display: block;
   transition: all .75s cubic-bezier(0.76, 0, 0.24, 1);
@@ -431,7 +464,7 @@ ul{
 }
 
 .nav-char-text {
-  color: #FEF8DC;
+  color: #F9EBBB;
   font-weight: 400;
   font-size: 54px;
 }
@@ -447,7 +480,7 @@ ul{
 }
 
 .discover-title {
-  color: #FEF8DC;
+  color: #F9EBBB;
   font-family: "Roobert";
   font-weight: 300;
   font-size: 20em;
@@ -503,7 +536,7 @@ ul{
 }
 
 .project:last-of-type{
-  border-bottom: 1px solid #FEF8DC;
+  border-bottom: 1px solid #F9EBBB;
 }
 
 .project .imgContainer{
@@ -519,7 +552,6 @@ ul{
 
 .scroll-section-outer {
   overflow-x: hidden;
-  background-color: #BC162A;
 }
 
 .scroll-section-inner {
@@ -528,7 +560,6 @@ ul{
   display: flex;
   flex-direction: row;
   position: relative;
-  background-color: aqua;
 }
 
 .scroll-section {
@@ -537,10 +568,19 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 20px;
-  background-color: bisque;
+  margin: 0px 0px;
 }
 
 .scroll-manifesto-title {
   display: block;
+}
+
+.manifesto video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18vw;
+  object-fit: contain;
+  border: none;
+  box-sizing: border-box;
 }

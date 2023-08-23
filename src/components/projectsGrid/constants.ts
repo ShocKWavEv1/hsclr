@@ -41,4 +41,11 @@ export const allProjectsList = [
     {img: image_6, smallImg: "", bg: "pink.500", title_1: "A Song For The", title_2: "Dead", description: "Color grading - Edition", number: "[ 6 ]"},
     {img: image_2, smallImg: "", bg: "primary.500", title_1: "Sports", title_2: "like you", description: "Color grading - Edition", number: "[ 7 ]"},
     {img: image_8, smallImg: "", bg: "pink.500", title_1: "Reflektor we", title_2: "exists", description: "Color grading - Edition", number: "[ 8 ]"},
+];
+
+export const showcaseProjectsList = [
+    {img: image_1, smallImg: "", bg: "primary.500", title_1: "Canada", title_2: "Monky", description: "Color grading - Edition", number: "[ 1 ]"},
+    {img: image_9, smallImg: "", bg: "pink.500", title_1: "Power", title_2: "Over Men", description: "Color grading - Edition", number: "[ 2 ]"},
+    {img: image_3, smallImg: "", bg: "primary.500", title_1: "La Dame de", title_2: "Soie", description: "Color grading - Edition", number: "[ 3 ]"},
+    {img: image_4, smallImg: "", bg: "pink.500", title_1: "Four", title_2: "out of Five", description: "Color grading - Edition", number: "[ 4 ]"},
 ]

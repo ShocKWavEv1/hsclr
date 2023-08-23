@@ -122,28 +122,60 @@ export const scrollDiscoverText = () => {
   );
 };
 
-export const scrollDiscoverReelText = () => {
-  const textElement1 = document.querySelectorAll(".discover-reel");
+export const scrollLiveDetailsText = () => {
+  const textElement1 = document.querySelectorAll(".text-slider-manifesto-live");
+  const textElement2 = document.querySelectorAll(".text-slider-manifesto-live-2");
 
-  const tl = gsap.timeline({ paused: true });
+  gsap.fromTo(
+    textElement1,
+    { xPercent: 0 },
+    {
+      xPercent: -200,
+      //skewX: 150,
+      scrollTrigger: {
+        trigger: ".container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }
+  );
 
-  // Define the animation you want to perform
-  tl.to(textElement1, {
-    xPercent: -500, // Move the text 100% to the right (it will move out of the screen)
-    opacity: 1,
-    duration: 0.2,
-  });
-
-  // Set up the ScrollTrigger
-  ScrollTrigger.create({
-    trigger: textElement1, // Element to trigger the animation
-    start: 'top top', // Trigger point, adjust as needed
-    end: 'bottom bottom', // End point, adjust as needed
-    animation: tl, // Pass the timeline to the ScrollTrigger
-    toggleActions: 'play none none play', // Play the animation once and don't reverse it
-    scrub: true, // Enable smooth scrolling effect
-  });
+  gsap.fromTo(
+    textElement2,
+    { xPercent: 0 },
+    {
+      xPercent: -350,
+      //skewX: 150,
+      scrollTrigger: {
+        trigger: ".container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }
+  );
 };
+
+export const scrollClubDetailsText = () => {
+  const textElement1 = document.querySelectorAll(".text-slider-manifesto-club");
+
+  gsap.fromTo(
+    textElement1,
+    { xPercent: 0 },
+    {
+      xPercent: 20,
+      //skewX: 150,
+      scrollTrigger: {
+        trigger: ".container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }
+  );
+};
+
 
 export const scrollColumnImages = () => {
   //const columnLeftScroll = document.querySelector(".column-left-scroll");

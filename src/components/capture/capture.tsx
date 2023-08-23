@@ -17,6 +17,7 @@ const Capture: React.FC<CaptureProps> = ({}) => {
       justifyContent="center"
       flexDirection="column"
       p="120px 80px"
+      className="bg-noise"
     >
       <SectionHeader
         section="capture"

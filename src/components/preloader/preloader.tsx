@@ -45,7 +45,7 @@ const Preloader: React.FC<PreloaderProps> = () => {
         <Box pt="25px">
           <TextMaskY
             text={phrases}
-            variant="H9HATTONREGULAR"
+            variant="H10HATTONREGULAR"
             delay={0.25}
             isFooter={false}
             className=""

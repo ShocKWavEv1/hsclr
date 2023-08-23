@@ -33,14 +33,14 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           onClick={() => router.push("/projects")}
         >
           <Box w="auto" mt="36px">
-            <Text variant="SMREGULAR" color="egg.200" mb="22px" mr="10px">
+            <Text variant="SMREGULAR" color="egg.400" mb="22px" mr="10px">
               {project.number}
             </Text>
           </Box>
           <Heading
             className="thumbnail-text"
             variant="H9HATTONREGULAR"
-            color="egg.200"
+            color="egg.400"
           >
             {project.title_1}
           </Heading>
@@ -67,7 +67,7 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           <Heading
             className="thumbnail-text"
             variant="H9HATTONREGULAR"
-            color="egg.200"
+            color="egg.400"
           >
             {project.title_2}
           </Heading>

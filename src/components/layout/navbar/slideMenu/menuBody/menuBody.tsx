@@ -53,7 +53,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                   router.push(item.path);
                 }}
               >
-                <Text as="span" variant="MDMEDIUM" color="egg.200">
+                <Text as="span" variant="MDMEDIUM" color="egg.400">
                   <motion.p
                     onMouseOver={() => {
                       setSelectedLink({ isActive: true, index });
@@ -83,7 +83,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                     >
                       <Text
                         variant="SMREGULAR"
-                        color="egg.200"
+                        color="egg.400"
                         mb="22px"
                         mr="10px"
                       >

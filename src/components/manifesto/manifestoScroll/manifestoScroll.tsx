@@ -30,7 +30,7 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
         start: "top center",
         end: "bottom 25%",
       },
-      color: "#FEF8DC",
+      color: "#F9EBBB",
       duration: 1,
       stagger: 0.09,
     });
@@ -56,12 +56,12 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
                 as="span"
                 key={index}
                 variant="H4HATTONREGULAR"
-                color="egg.200"
+                color="egg.400"
               >
                 <span
                   className="reveal-text"
                   ref={setlettersRef}
-                  color="egg.200"
+                  color="egg.400"
                 >
                   {letter}
                 </span>

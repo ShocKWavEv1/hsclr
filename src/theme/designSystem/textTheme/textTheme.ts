@@ -41,6 +41,11 @@ const PPPangram = localFonts({
   ],
 });
 
+const baseXXLStyles = {
+  fontFamily: PPPangram.style.fontFamily,
+  fontSize: "34px",
+};
+
 const baseXLStyles = {
   fontFamily: PPPangram.style.fontFamily,
   fontSize: "24px",
@@ -70,6 +75,26 @@ const baseXSSStyles = {
   fontFamily: PPPangram.style.fontFamily,
   fontSize: "10px",
 };
+
+/* XXL VARIANTS */
+const XXLLIGHT = defineStyle({
+  ...baseXXLStyles,
+  fontWeight: 300,
+});
+const XXLREGULAR = defineStyle({
+  ...baseXXLStyles,
+  fontWeight: 400,
+});
+
+const XXLMEDIUM = defineStyle({
+  ...baseXXLStyles,
+  fontWeight: 500,
+});
+
+const XXLSEMIBOLD = defineStyle({
+  ...baseXXLStyles,
+  fontWeight: 600,
+});
 
 /* XL VARIANTS */
 const XLLIGHT = defineStyle({
@@ -193,6 +218,10 @@ const XSSSEMIBOLD = defineStyle({
 
 export const TextTheme = defineStyleConfig({
   variants: {
+    XXLLIGHT,
+    XXLREGULAR,
+    XXLMEDIUM,
+    XXLSEMIBOLD,
     XLLIGHT,
     XLREGULAR,
     XLMEDIUM,

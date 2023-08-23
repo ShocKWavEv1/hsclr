@@ -1,14 +1,12 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { TextYProps } from "./model";
+import { ParagraphMaskProps } from "./model";
 
-const TextMaskY: React.FC<TextYProps> = ({
+const ParagraphMaskY: React.FC<ParagraphMaskProps> = ({
   text,
   variant,
   delay,
-  className,
-  isFooter,
   once,
 }) => {
   const phrases = text;
@@ -40,15 +38,9 @@ const TextMaskY: React.FC<TextYProps> = ({
               initial="initial"
               animate={inView ? "enter" : ""}
             >
-              <Heading
-                variant={variant}
-                color="egg.400"
-                className={isFooter && index === 0 ? className : ""}
-                mt={isFooter && index !== 0 ? "-10px" : "0px"}
-                textDecoration={isFooter && index !== 0 ? "underline" : ""}
-              >
+              <Text variant={variant} color="egg.400">
                 {phrase}
-              </Heading>
+              </Text>
             </motion.div>
           </Box>
         );
@@ -57,4 +49,4 @@ const TextMaskY: React.FC<TextYProps> = ({
   );
 };
 
-export default TextMaskY;
+export default ParagraphMaskY;

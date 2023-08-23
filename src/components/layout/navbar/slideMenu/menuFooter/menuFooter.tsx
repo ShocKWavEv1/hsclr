@@ -37,7 +37,7 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
                       pl="10px"
                       opacity={0.75}
                       variant="XSMEDIUM"
-                      color="egg.200"
+                      color="egg.400"
                       textTransform="uppercase"
                       overflow="hidden"
                     >
@@ -71,9 +71,9 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
                       border="1px solid white"
                       p="2px 15px"
                       borderRadius="1vw"
-                      color="egg.200"
+                      color="egg.400"
                       transition=".35s ease-in-out"
-                      _hover={{ bg: "egg.200", color: "black" }}
+                      _hover={{ bg: "egg.400", color: "black" }}
                       cursor="pointer"
                     >
                       <Text pt="4px" opacity={0.75} variant="XSMEDIUM">

@@ -30,7 +30,7 @@ const FooterMedia: React.FC<FooterMediaProps> = ({ socialMedia }) => {
               pt="4px"
               opacity={0.75}
               variant="MDMEDIUM"
-              color="egg.200"
+              color="egg.400"
             >
               MMXXII - housecolor
             </Text>
@@ -51,9 +51,9 @@ const FooterMedia: React.FC<FooterMediaProps> = ({ socialMedia }) => {
                   border="1px solid white"
                   p="2px 15px"
                   borderRadius="25em"
-                  color="egg.200"
+                  color="egg.400"
                   transition=".35s ease-in-out"
-                  _hover={{ bg: "egg.200", color: "black" }}
+                  _hover={{ bg: "egg.400", color: "black" }}
                   cursor="pointer"
                 >
                   <Text opacity={0.75} variant="XSMEDIUM" mt="3px">

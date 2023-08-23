@@ -31,7 +31,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           </Box>
           <Text
             variant="XSMEDIUM"
-            color={isDark ? "egg.200" : "black"}
+            color={isDark ? "egg.400" : "black"}
             textTransform="lowercase"
             opacity={0.65}
             lineHeight={2.65}
@@ -44,11 +44,11 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         <Box w="100%" display="flex" flexDirection="column">
           <Heading
             variant="H7HATTONREGULAR"
-            color={isDark ? "egg.200" : "black"}
+            color={isDark ? "egg.400" : "black"}
           >
             {title}
           </Heading>
-          <Text variant="MDREGULAR" color={isDark ? "egg.200" : "black"}>
+          <Text variant="MDREGULAR" color={isDark ? "egg.400" : "black"}>
             {brackets}
           </Text>
           {hasButton && (
@@ -62,7 +62,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             description.map((item: any, i: number) => {
               return (
                 <Box w="100%" mt="30px" key={i}>
-                  <Text variant="MDREGULAR" color="egg.200">
+                  <Text variant="MDREGULAR" color="egg.400">
                     {item}
                   </Text>
                 </Box>

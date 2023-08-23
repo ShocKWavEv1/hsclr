@@ -1,11 +1,16 @@
+import baruc from "../../../public/static/images/team/1.jpg";
+import rodrigo from "../../../public/static/images/team/2.jpg";
+import sebastian from "../../../public/static/images/team/3.jpg";
+import axell from "../../../public/static/images/team/4.jpg";
+
 export const title = "We are a collective ↔ for creative talent seeking safe harbour";
 
 export const teamList1 = [
-    { name: "Rodrigo Salmerón", image: "2.jpg", role: "CEO & CO-FOUNDER OF MONOPO", number: "[ 1 ]"},
-    { name: "Sebastian Nuñez", image: "4.jpg", role: "ART DIRECTOR, DESIGNER OF MONOPO TOKYO", number: "[ 3 ]"}
+    { title: "Rodrigo Salmerón", image: rodrigo, description: "CEO & CO-FOUNDER OF MONOPO", number: "[ 1 ]"},
+    { title: "Sebastian Nuñez", image: axell, description: "ART DIRECTOR, DESIGNER OF MONOPO TOKYO", number: "[ 3 ]"}
 ]
 
 export const teamList2 = [
-    { name: "Baruc Narvaez", image: "1.jpg", role: "BRANCH DIRECTOR, CREATIVE DIRECTOR", number: "[ 2 ]" },
-    { name: "Axell Guillen", image: "3.jpg", role: "BRANCH DIRECTOR, FILM DIRECTOR", number: "[ 4 ]" },
+    { title: "Baruc Narvaez", image: baruc, description: "BRANCH DIRECTOR, CREATIVE DIRECTOR", number: "[ 2 ]" },
+    { title: "Axell Guillen", image: sebastian, description: "BRANCH DIRECTOR, FILM DIRECTOR", number: "[ 4 ]" },
 ]

@@ -15,13 +15,13 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
   const router = useRouter();
   return (
-    <Box id="navbar" w="100%" position="absolute" zIndex={3}>
+    <Box id="navbar" w="100%" position="absolute" zIndex={3} bg="blue">
       <SlideY direction={-180} delay={0.25} duration={1}>
         <SimpleGrid
           w="100%"
           h="100%"
           columns={[2, 2, 2, 2]}
-          p="30px 40px 0px 40px"
+          p="30px 50px 0px 50px"
           position="absolute"
           zIndex={4}
         >
@@ -43,11 +43,12 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             >
               <Box
                 w="60px"
-                mt="2px"
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
                 transform="rotate(270deg)"
+                position="absolute"
+                top="30px"
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>

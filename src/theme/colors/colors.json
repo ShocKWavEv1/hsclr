@@ -138,6 +138,10 @@
         },
         "licorice.100": {
             "value": "#F4E9E7"
+        },
+
+        "lenis": {
+            "value": "#ff98a2"
         }
     }
 }

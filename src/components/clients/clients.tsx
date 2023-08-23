@@ -37,7 +37,7 @@ const Clients: React.FC<ClientsProps> = ({}) => {
             duration: 1,
           }}
         >
-          <Text variant="SMREGULAR" color="egg.200">
+          <Text variant="SMREGULAR" color="egg.400">
             They trust us
           </Text>
         </motion.div>
