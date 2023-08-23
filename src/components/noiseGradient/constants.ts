@@ -1,6 +1,6 @@
 export const textMask = [
-    "We are a creative post production ",
-    "studio obsessed with color ",
+    "We are a creative post production",
+    "studio obsessed with color",
     "grading and excellence"
 ];
 

@@ -1,41 +1,9 @@
 import SectionHeader from "@/components/sectionHeader/sectionHeader";
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef } from "react";
 import { fullManifestoSteps } from "./constants";
 import { FullManifestoProps } from "./model";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
-  useEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: "-400vw",
-        ease: "none",
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "0px top",
-          end: "4000px top",
-          scrub: 0.2,
-          pin: true,
-          anticipatePin: 1,
-        },
-      }
-    );
-    return () => {
-      pin.kill();
-    };
-  }, []);
-
   return (
     <Box w="100%" p="100px 80px 0px 80px" className="bg-noise">
       <SectionHeader
@@ -145,7 +113,31 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
 export default FullManifesto;
 
 {
-  /* <Box w="100%">
+  /*
+
+  const sectionRef = useRef(null);
+  const triggerRef = useRef(null);
+      const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: "-400vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "0px top",
+          end: "4000px top",
+          scrub: 0.2,
+          pin: true,
+          anticipatePin: 1,
+        },
+      }
+    );
+    return () => {
+      pin.kill();
+    }; <Box w="100%">
       <section className="scroll-section-outer">
         <div ref={triggerRef}>
           <Box w="100%" p="100px 80px 0px 80px">
