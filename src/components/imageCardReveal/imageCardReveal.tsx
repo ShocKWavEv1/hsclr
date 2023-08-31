@@ -59,7 +59,7 @@ const ImageCardReveal: React.FC<ImageCardRevealProps> = ({
               }}
             />
           </Box>
-          <Box
+          {/*<Box
             w="100%"
             h="100%"
             bg="lenis"
@@ -68,7 +68,7 @@ const ImageCardReveal: React.FC<ImageCardRevealProps> = ({
             top={0}
             left={inView ? "100%" : "0%"}
             transition="left 0.5s cubic-bezier(0.3, 0.2, 0.2, 0.8)"
-          />
+          />*/}
         </Box>
         <Box
           w="100%"
