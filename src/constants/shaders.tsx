@@ -28,6 +28,11 @@ vec3 accent =  vec3(0./255., 0./255., 0./255.);
 vec3 baseSecond = vec3(239./255., 92./255., 9./255.);
 vec3 baseThird =  vec3(243./255., 11./255., 8./255.);`;
 
+export const ATELIER_SHADER = `vec3 baseFirst = vec3(3./255., 13./255., 150./255.);
+vec3 accent =  vec3(0./255., 0./255., 0./255.);
+vec3 baseSecond = vec3(23./255., 37./255., 200./255.);
+vec3 baseThird =  vec3(3./255., 13./255., 150./255.);`;
+
 export const vertShader = `    
     uniform float time;
     varying vec2 vUv;
