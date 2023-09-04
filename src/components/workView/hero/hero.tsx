@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import { Suspense } from "react";
 import { HeroProps } from "./model";
-import SketchWork from "../sketchWork/sketchWork";
 import PageHeroSection from "@/components/pageHeroSection/pageHeroSection";
+import SketchWork from "../sketchWork/sketchWork";
 
 const Hero: React.FC<HeroProps> = ({}) => {
   return (

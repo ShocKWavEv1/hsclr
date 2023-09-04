@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import { Suspense } from "react";
 import { HeroProps } from "./model";
-import SketchTeam from "../sketchTeam/sketchTeam";
 import PageHeroSection from "@/components/pageHeroSection/pageHeroSection";
+import SketchTeam from "../sketchTeam/sketchTeam";
 
 const HeroTeam: React.FC<HeroProps> = ({}) => {
   return (

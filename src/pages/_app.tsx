@@ -35,6 +35,7 @@ export default function App({
       router.events.off("routeChangeComplete", handleRouteComplete);
       router.events.off("routeChangeError", handleRouteError);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleRouteComplete = () => {

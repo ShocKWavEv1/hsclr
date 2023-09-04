@@ -1,14 +1,14 @@
-import { getFragShader, ORANGE_SHADER, vertShader } from "@/constants/shaders";
+import { ATELIER_SHADER, getFragShader, vertShader } from "@/constants/shaders";
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const SketchWork = () => {
+const Sketch = () => {
   const containerRef = useRef(null);
-  const canvasRef = useRef(null);
+  const canvasRef: any = useRef(null);
 
   useEffect(() => {
     const vertexShader = vertShader;
-    const fragmentShader = getFragShader(ORANGE_SHADER);
+    const fragmentShader = getFragShader(ATELIER_SHADER);
 
     // Set up Three.js scene here
     const scene = new THREE.Scene();
@@ -20,8 +20,7 @@ const SketchWork = () => {
     );
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-        const canvasHeight = window.innerHeight * 0.62;
-    renderer.setSize(window.innerWidth, canvasHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Create shader materials using the imported shaders
     const material = new THREE.ShaderMaterial({
@@ -29,20 +28,18 @@ const SketchWork = () => {
       fragmentShader: fragmentShader,
       uniforms: {
         time: { value: 0 },
-        resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+        resolution: {
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
       },
     });
 
     // Create mesh and add to the scene
     const geometry = new THREE.BufferGeometry();
     const vertices = new Float32Array([
-      -1, -1, 0,
-      1, -1, 0,
-      1, 1, 0,
+      -1, -1, 0, 1, -1, 0, 1, 1, 0,
 
-      -1, -1, 0,
-      1, 1, 0,
-      -1, 1, 0,
+      -1, -1, 0, 1, 1, 0, -1, 1, 0,
     ]);
     geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
     const mesh = new THREE.Mesh(geometry, material);
@@ -52,7 +49,7 @@ const SketchWork = () => {
     camera.position.z = 1;
 
     // Animation and rendering code
-    const animate = (time) => {
+    const animate = (time: any) => {
       // Update shader uniforms
       material.uniforms.time.value = time * 0.0004;
 
@@ -62,7 +59,7 @@ const SketchWork = () => {
       requestAnimationFrame(animate);
     };
 
-    animate();
+    animate(1);
 
     return () => {
       // Cleanup code if necessary
@@ -72,4 +69,4 @@ const SketchWork = () => {
   return <canvas ref={canvasRef} style={{ width: "100vw", height: "100vh" }} />;
 };
 
-export default SketchWork;
+export default Sketch;
