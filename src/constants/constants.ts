@@ -1,22 +1,8 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import SplitText from "gsap-trial/dist/SplitText";
 
 export const scrollBackgroundColor = () => {
-  gsap.registerPlugin(ScrollTrigger, SplitText);
-
-  let mySplitText = new SplitText(".split", { type: "chars" });
-  let chars = mySplitText.chars;
-
-  gsap.from(chars, {
-    yPercent: 130,
-    ease: "back.out",
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".split",
-      start: "top 80%",
-    },
-  });
+  gsap.registerPlugin(ScrollTrigger);
 
   const sections = document.querySelectorAll("section");
   const body = document.body;
