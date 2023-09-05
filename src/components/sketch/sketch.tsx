@@ -1,4 +1,4 @@
-import { ATELIER_SHADER, getFragShader, vertShader } from "@/constants/shaders";
+import { getFragShader, PARIS_SHADER, vertShader } from "@/constants/shaders";
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
@@ -8,7 +8,7 @@ const Sketch = () => {
 
   useEffect(() => {
     const vertexShader = vertShader;
-    const fragmentShader = getFragShader(ATELIER_SHADER);
+    const fragmentShader = getFragShader(PARIS_SHADER);
 
     // Set up Three.js scene here
     const scene = new THREE.Scene();
