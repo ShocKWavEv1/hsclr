@@ -13,7 +13,7 @@ const Sketch = () => {
     // Set up Three.js scene here
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-      49,
+      48,
       window.innerWidth / window.innerHeight, // Set the aspect ratio here
       1,
       1000
