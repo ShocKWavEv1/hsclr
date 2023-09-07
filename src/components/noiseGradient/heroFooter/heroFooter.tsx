@@ -8,11 +8,8 @@ import { motion } from "framer-motion";
 const HeroFooter: React.FC<HeroFooterProps> = ({ options }) => {
   return (
     <Box
-      as="section"
       w="100%"
-      h="auto"
       position="absolute"
-      top={0}
       bottom={0}
       left={0}
       right={0}
@@ -21,7 +18,7 @@ const HeroFooter: React.FC<HeroFooterProps> = ({ options }) => {
       justifyContent="flex-end"
       flexDirection="column"
       textAlign="center"
-      zIndex={1}
+      zIndex={2}
     >
       <SlideY direction={180} delay={0.25} duration={1}>
         <Box

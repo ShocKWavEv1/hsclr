@@ -13,7 +13,7 @@ const Sketch = () => {
     // Set up Three.js scene here
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-      48,
+      49,
       window.innerWidth / window.innerHeight, // Set the aspect ratio here
       1,
       1000
@@ -51,7 +51,7 @@ const Sketch = () => {
     // Animation and rendering code
     const animate = (time: any) => {
       // Update shader uniforms
-      material.uniforms.time.value = time * 0.0004;
+      material.uniforms.time.value = time * 0.00045;
 
       // Render the scene
       renderer.render(scene, camera);
