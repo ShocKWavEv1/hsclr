@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Show } from "@chakra-ui/react";
 import { Suspense } from "react";
 import { NoiseGradientProps } from "./model";
 import { extraDescription, textMask } from "./constants";
@@ -20,7 +20,9 @@ const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
         <Sketch />
       </Suspense>
       <HeroText textMask={textMask} />
-      <HeroFooter options={extraDescription} />
+      <Show above="lg">
+        <HeroFooter options={extraDescription} />
+      </Show>
     </Box>
   );
 };

@@ -15,7 +15,6 @@ const breakpoints = {
   md: "744px",
   lg: "1024px",
   xl: "1280px",
-  "2xl": "1440px",
 };
 
 const config = {
@@ -24,7 +23,6 @@ const config = {
 };
 
 const theme = extendTheme({
-  breakpoints,
   config,
   colors,
   components: {

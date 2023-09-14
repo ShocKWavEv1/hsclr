@@ -1,5 +1,5 @@
 export interface TextMaskProps {
     text: any;
-    variant: string;
+    variant: any;
     delay: number
 }

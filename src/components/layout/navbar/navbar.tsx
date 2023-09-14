@@ -1,9 +1,9 @@
-import { Box, Heading, Show, SimpleGrid, Stack } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { NavbarProps } from "./model";
-import circles from "../../../static/logo/taxo.svg";
+import circles from "../../../static/logo/double_circles.svg";
 import { navigation } from "./constants";
 import SlideY from "@/components/animations/slideY/slideY";
 import Drawer from "./drawer/drawer";
@@ -21,7 +21,13 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           w="100%"
           h="100%"
           columns={[2, 2, 2, 2]}
-          p="30px 50px 0px 50px"
+          p={[
+            "25px 20px 0px 20px",
+            "30px 20px 0px 20px",
+            "30px 30px 0px 30px",
+            "30px 50px 0px 50px",
+            "30px 50px 0px 50px",
+          ]}
           position="absolute"
           zIndex={4}
         >
@@ -34,7 +40,6 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           >
             <Box
               w="auto"
-              zIndex={2}
               display="flex"
               alignItems="center"
               justifyContent="flex-start"
@@ -42,16 +47,30 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               onClick={() => router.push("/")}
             >
               <Box
-                w="60px"
+                w={["35px", "35px", "35px", "38px"]}
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
-                transform="rotate(270deg)"
-                position="absolute"
-                top="30px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                mt="-6px"
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>
+              <Heading
+                variant={[
+                  "H9HATTONREGULAR",
+                  "H9HATTONREGULAR",
+                  "H9HATTONREGULAR",
+                  "H9HATTONREGULAR",
+                  "H9HATTONREGULAR",
+                ]}
+                color="egg.400"
+                pl="7px"
+              >
+                housecolor | studio
+              </Heading>
             </Box>
           </Box>
           <Box
