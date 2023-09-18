@@ -13,7 +13,7 @@ const NoiseGradient: React.FC<NoiseGradientProps> = ({}) => {
       as="section"
       w="100%"
       h="100vh"
-      bg="primary.500"
+      bg="black"
       position="relative"
     >
       <Suspense fallback>

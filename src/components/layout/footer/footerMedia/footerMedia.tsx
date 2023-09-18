@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Show, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { FooterMediaProps } from "./model";
 import circles from "../../../../static/logo/double_circles.svg";
@@ -22,18 +22,25 @@ const FooterMedia: React.FC<FooterMediaProps> = ({ socialMedia }) => {
             justifyContent="flex-start"
             cursor="pointer"
           >
-            <Box w="40px" pointerEvents="all" cursor="pointer" className="link">
+            <Box
+              w={["40px", "40px", "40px", "40px", "40px"]}
+              pointerEvents="all"
+              cursor="pointer"
+              className="link"
+            >
               <Image priority src={circles} alt="housecolor logo" />
             </Box>
-            <Text
-              pl="10px"
-              pt="4px"
-              opacity={0.75}
-              variant="MDMEDIUM"
-              color="egg.400"
-            >
-              MMXXII - housecolor
-            </Text>
+            <Show above="md">
+              <Text
+                pl="10px"
+                pt="4px"
+                opacity={0.75}
+                variant="MDMEDIUM"
+                color="egg.400"
+              >
+                MMXXII - housecolor
+              </Text>
+            </Show>
           </Box>
         </Box>
         <Box

@@ -33,7 +33,7 @@ body::after {
   content: "";
   height: 300%;
   left: -100%;
-  opacity: 0.06;
+  opacity: 0.085;
   pointer-events: none;
   position: fixed;
   top: -100%;
@@ -211,9 +211,6 @@ ul{
 }
 
 .reveal-text {
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 90px;
   color: rgba(254, 248, 220, .2);
 }
 
@@ -244,11 +241,7 @@ ul{
 
 .slider .text-slider{
   position: relative;
-  margin: 0px;
-  font-weight: 400;
   color: #F9EBBB;
-  font-size: 230px;
-  margin-left: 500px;
 }
 
 .slider-manifesto-live .text-slider-manifesto-live {
@@ -402,7 +395,7 @@ ul{
 
 .nav-grid {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 250px;
   grid-gap: 10px;
 }
 

@@ -1,12 +1,13 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import SlideY from "../animations/slideY/slideY";
+import { Box, Show, useMediaQuery } from "@chakra-ui/react";
 import SectionHeader from "../sectionHeader/sectionHeader";
 import ColumnImages from "./columnImages/columnImages";
-import { projectsColumn1, projectsColumn2 } from "./constants";
+import { allProjects, projectsColumn1, projectsColumn2 } from "./constants";
 import { ProjectsGridProps } from "./model";
+import { useEffect, useState } from "react";
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
   return (
     <Box
       as="section"
@@ -18,7 +19,13 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
-      p="100px 80px 0px 80px"
+      p={[
+        "60px 20px 0px 20px",
+        "60px 30px 0px 30px",
+        "100px 60px 0px 60px",
+        "100px 80px 0px 80px",
+        "100px 80px 0px 80px",
+      ]}
     >
       <SectionHeader
         section="projects"
@@ -34,8 +41,18 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
         justifyContent="center"
         flexDirection="row"
       >
-        <Box w="70%" h="auto" mt="80px" p="0px 20px">
-          <Box w="100%" display="flex" flexDirection="row" gap="50px">
+        <Box
+          w={["100%", "100%", "100%", "70%", "70%"]}
+          h="auto"
+          mt="80px"
+          p={["0px 20px", "0px 40px", "0px 40px", "0px 20px", "0px 20px"]}
+        >
+          <Box
+            w="100%"
+            display="flex"
+            flexDirection={["column", "column", "row", "row", "row"]}
+            gap="50px"
+          >
             <ColumnImages
               images={projectsColumn1}
               direction="left"

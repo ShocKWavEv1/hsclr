@@ -10,7 +10,7 @@ const Reel: React.FC<ReelProps> = ({}) => {
       <motion.div
         initial={{ opacity: 0, y: 250 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
         <Box display={showFullReel ? "none" : "block"}>

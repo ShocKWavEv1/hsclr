@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { ListCaptureProps } from "./model";
 import { motion } from "framer-motion";
 import TextMaskY from "@/components/animations/textY/textY";
@@ -18,8 +11,9 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
+      p={["0px 0px", "0px 20px", "0px 20px", "0px 20px", "0px 20px"]}
     >
-      <Box w="80%" h="auto" mt="80px">
+      <Box w={["100%", "100%", "100%", "80%", "80%"]} h="auto" mt="80px">
         <Box w="100%">
           <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 3]} spacing="50px">
             {services.map((item: any, i: number) => {
@@ -28,7 +22,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
                   key={i}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1 }}
                 >
                   <Box
@@ -43,7 +37,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
                     <TextMaskY
                       text={[item.number]}
                       variant="H8HATTONREGULAR"
-                      once
+                      once={true}
                       delay={0.45}
                       isFooter={false}
                       className=""
@@ -52,7 +46,7 @@ const ListCapture: React.FC<ListCaptureProps> = ({ services }) => {
                       <TextMaskY
                         text={[item.title]}
                         variant="H8HATTONREGULAR"
-                        once={false}
+                        once={true}
                         delay={0.45}
                         isFooter={false}
                         className=""

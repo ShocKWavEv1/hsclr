@@ -41,7 +41,11 @@ const Clients: React.FC<ClientsProps> = ({}) => {
             They trust us
           </Text>
         </motion.div>
-        <Box w="680px" pt="50px" textAlign="center">
+        <Box
+          w={["auto", "auto", "680px", "680px", "680px"]}
+          pt="50px"
+          textAlign="center"
+        >
           <TextMaskY
             text={clients}
             variant="H7HATTONREGULAR"

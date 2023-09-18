@@ -105,7 +105,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
           justifyContent="center"
         >
           <Box
-            w="200px"
+            w="100%"
             display="flex"
             alignItems="center"
             justifyContent="center"

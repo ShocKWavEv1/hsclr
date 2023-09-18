@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Discover = ({}) => {
   return (
-    <Box w="100%" h="auto" pb="50px">
+    <Box w="100%" h="auto" pb={["30px", "30px", "50px", "50px", "50px"]}>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,8 +14,15 @@ const Discover = ({}) => {
         <Box className="slider">
           <Heading
             className="text-slider"
-            variant="H1HATTONMEDIUM"
+            variant={[
+              "H1HATTONREGULAR",
+              "H1HATTONREGULAR",
+              "H1HATTONREGULAR",
+              "JUMBOHATTONREGULAR",
+              "JUMBOHATTONREGULAR",
+            ]}
             color="egg.400"
+            ml={["100px", "100px", "240px", "500px", "500px"]}
           >
             Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
             reel ↔

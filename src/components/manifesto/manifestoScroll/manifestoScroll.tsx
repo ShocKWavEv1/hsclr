@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ManifestoScrollProps } from "./model";
 import { Box, Heading, Text } from "@chakra-ui/react";
-import circles from "../../../static/logo/taxo.svg";
+import circles from "../../../static/logo/double_circles.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -48,14 +48,25 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
       justifyContent="center"
       flexDirection="row"
     >
-      <Box w="80%" h="auto" mt="80px" p="0px 20px">
+      <Box
+        w={["100%", "100%", "100%", "80%", "80%"]}
+        h="auto"
+        mt="80px"
+        p={["0px 0px", "0px 0px", "0px 0px", "0px 20px", "0px 20px"]}
+      >
         <div className="reveal">
-          <div ref={triggerRef}>
+          <div style={{ width: "100%" }} ref={triggerRef}>
             {text.split("").map((letter, index) => (
               <Heading
                 as="span"
                 key={index}
-                variant="H4HATTONREGULAR"
+                variant={[
+                  "H6HATTONREGULAR",
+                  "H5HATTONREGULAR",
+                  "H4HATTONREGULAR",
+                  "H4HATTONREGULAR",
+                  "H4HATTONREGULAR",
+                ]}
                 color="egg.400"
               >
                 <span
@@ -84,10 +95,13 @@ const ManifestoScroll: React.FC<ManifestoScrollProps> = () => {
             transition={{
               ease: [0.6, 0.01, -0.05, 0.95],
               duration: 1,
-              delay: 0.75,
+              delay: 0.25,
             }}
           >
-            <Box w="60px" pointerEvents="all" transform="rotate(270deg)">
+            <Box
+              w={["60px", "60px", "80px", "80px", "80px"]}
+              pointerEvents="all"
+            >
               <Image
                 style={{ width: "100%" }}
                 priority

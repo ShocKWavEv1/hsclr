@@ -16,7 +16,13 @@ const Capture: React.FC<CaptureProps> = ({}) => {
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
-      p="120px 80px"
+      p={[
+        "60px 20px 60px 20px",
+        "60px 30px 60px 30px",
+        "120px 60px 120px 60px",
+        "120px 80px 120px 80px",
+        "120px 80px 120px 80px",
+      ]}
       className="bg-noise"
     >
       <SectionHeader

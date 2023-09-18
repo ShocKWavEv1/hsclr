@@ -78,7 +78,7 @@ const ImageCardReveal: React.FC<ImageCardRevealProps> = ({
           flexDirection="column"
           pt="20px"
         >
-          <Heading variant="H10HATTONMEDIUM" color="egg.400">
+          <Heading variant="H10REGULAR" color="egg.400">
             {item.title}
           </Heading>
           <Text py="5px" variant="SMMEDIUM" color="egg.400" opacity={0.75}>

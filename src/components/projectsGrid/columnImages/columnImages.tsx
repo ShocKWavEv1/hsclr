@@ -10,7 +10,7 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({
 }) => {
   return (
     <Box
-      w="50%"
+      w={["100%", "100%", "100%", "50%", "50%"]}
       pt={direction === "right" ? "100px" : "0px"}
       display="flex"
       flexDirection="column"

@@ -48,7 +48,13 @@ const Manifesto: React.FC<ManifestoProps> = ({}) => {
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
-      p="140px 80px 80px 80px"
+      p={[
+        "60px 20px 60px 20px",
+        "60px 30px 60px 30px",
+        "100px 60px 60px 60px",
+        "140px 80px 80px 80px",
+        "140px 80px 80px 80px",
+      ]}
       className="bg-noise-manifesto"
     >
       <SectionHeader

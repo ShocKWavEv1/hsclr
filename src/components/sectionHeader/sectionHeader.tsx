@@ -12,13 +12,16 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <Box
-      w="80%"
+      w={["100%", "100%", "100%", "80%", "80%"]}
       display="flex"
       alignItems="flex-start"
       justifyContent="flex-start"
       flexDirection="row"
     >
-      <Stack spacing="60px" direction="row">
+      <Stack
+        spacing={["40px", "40px", "40px", "60px", "60px"]}
+        direction={["column", "column", "column", "row", "row"]}
+      >
         <Box
           w="auto"
           display="flex"
@@ -26,29 +29,48 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           justifyContent="flex-start"
           flexDirection="row"
         >
-          <Box pt="2px">
-            <TriangleRightIcon color={isDark ? "#FEF8DC" : "#000"} />
-          </Box>
           <Text
             variant="XSMEDIUM"
             color={isDark ? "egg.400" : "black"}
             textTransform="lowercase"
             opacity={0.65}
-            lineHeight={2.65}
-            pl="2px"
-            mt="-8px"
           >
+            <Text
+              as="span"
+              variant="XSMEDIUM"
+              color={isDark ? "egg.400" : "black"}
+              textTransform="lowercase"
+              opacity={0.65}
+              pr="5px"
+            >
+              ►
+            </Text>
             {section}
           </Text>
         </Box>
         <Box w="100%" display="flex" flexDirection="column">
           <Heading
-            variant="H7HATTONREGULAR"
+            variant={[
+              "H7HATTONREGULAR",
+              "H7HATTONREGULAR",
+              "H7HATTONREGULAR",
+              "H7HATTONREGULAR",
+              "H7HATTONREGULAR",
+            ]}
             color={isDark ? "egg.400" : "black"}
           >
             {title}
           </Heading>
-          <Text variant="MDREGULAR" color={isDark ? "egg.400" : "black"}>
+          <Text
+            variant={[
+              "SMREGULAR",
+              "SMREGULAR",
+              "SMREGULAR",
+              "MDREGULAR",
+              "MDREGULAR",
+            ]}
+            color={isDark ? "egg.400" : "black"}
+          >
             {brackets}
           </Text>
           {hasButton && (

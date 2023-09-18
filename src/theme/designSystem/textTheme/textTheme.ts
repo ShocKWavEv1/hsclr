@@ -41,38 +41,73 @@ const PPPangram = localFonts({
   ],
 });
 
+const PPNeue = localFonts({
+  src: [
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Thin.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Light.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Book.woff',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Regular.woff',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Medium.woff',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Bold.woff',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+});
+
 const baseXXLStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "34px",
 };
 
 const baseXLStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "24px",
 };
 
 const baseLGStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "22px",
 };
 
 const baseMDStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "18px",
 };
 
 const baseSMStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "16px",
 };
 
 const baseXSStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "14px",
 };
 
 const baseXSSStyles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "10px",
 };
 

@@ -16,7 +16,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
       alignItems="flex-start"
       justifyContent="flex-start"
       flexDirection="column"
-      p="120px 80px 0px 80px"
+      p={[
+        "0px 20px 0px 20px",
+        "60px 30px 0px 30px",
+        "120px 60px 0px 60px",
+        "120px 80px 0px 80px",
+        "120px 80px 0px 80px",
+      ]}
       className="bg-noise-manifesto"
     >
       <SectionHeader

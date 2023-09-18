@@ -1,6 +1,6 @@
 export interface TextYProps {
     text: any;
-    variant: string;
+    variant: any;
     delay: number;
     className: string;
     isFooter: boolean;

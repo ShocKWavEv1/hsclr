@@ -5,6 +5,13 @@ import axell from "../../../public/static/images/team/4.jpg";
 
 export const title = "We are a collective ↔ for creative talent seeking safe harbour";
 
+export const allTeamList = [
+    { title: "Rodrigo Salmerón", image: rodrigo, description: "CEO & CO-FOUNDER OF MONOPO", number: "[ 1 ]"},
+    { title: "Baruc Narvaez", image: baruc, description: "BRANCH DIRECTOR, CREATIVE DIRECTOR", number: "[ 2 ]" },
+    { title: "Sebastian Nuñez", image: axell, description: "ART DIRECTOR, DESIGNER OF MONOPO TOKYO", number: "[ 3 ]"},
+    { title: "Axell Guillen", image: sebastian, description: "BRANCH DIRECTOR, FILM DIRECTOR", number: "[ 4 ]" },
+]
+
 export const teamList1 = [
     { title: "Rodrigo Salmerón", image: rodrigo, description: "CEO & CO-FOUNDER OF MONOPO", number: "[ 1 ]"},
     { title: "Sebastian Nuñez", image: axell, description: "ART DIRECTOR, DESIGNER OF MONOPO TOKYO", number: "[ 3 ]"}

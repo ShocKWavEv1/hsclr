@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, Show, SimpleGrid } from "@chakra-ui/react";
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           h="100%"
           columns={[2, 2, 2, 2]}
           p={[
-            "25px 20px 0px 20px",
+            "30px 20px 0px 20px",
             "30px 20px 0px 20px",
             "30px 30px 0px 30px",
             "30px 50px 0px 50px",
@@ -47,30 +47,31 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               onClick={() => router.push("/")}
             >
               <Box
-                w={["35px", "35px", "35px", "38px"]}
+                w={["54px", "54px", "42px", "42px", "42px"]}
                 pointerEvents="all"
                 cursor="pointer"
                 className="link"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                mt="-6px"
               >
                 <Image priority src={circles} alt="housecolor logo" />
               </Box>
-              <Heading
-                variant={[
-                  "H9HATTONREGULAR",
-                  "H9HATTONREGULAR",
-                  "H9HATTONREGULAR",
-                  "H9HATTONREGULAR",
-                  "H9HATTONREGULAR",
-                ]}
-                color="egg.400"
-                pl="7px"
-              >
-                housecolor | studio
-              </Heading>
+              <Show above="md">
+                <Heading
+                  variant={[
+                    "H10LIGHT",
+                    "H10LIGHT",
+                    "H10LIGHT",
+                    "H10LIGHT",
+                    "H10LIGHT",
+                  ]}
+                  color="egg.400"
+                  pl="12px"
+                >
+                  housecolor | studio
+                </Heading>
+              </Show>
             </Box>
           </Box>
           <Box

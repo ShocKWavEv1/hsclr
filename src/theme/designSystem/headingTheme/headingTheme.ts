@@ -71,55 +71,95 @@ const PPHatton = localFonts({
   ],
 });
 
+const PPNeue = localFonts({
+  src: [
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Thin.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Light.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Book.woff',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Regular.woff',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Medium.woff',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../assets/neue/PPNeueMontrealMono-Bold.woff',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+});
+
 const baseH1Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "140px",
 };
 
 const baseH2Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "110px",
 };
 
 const baseH3Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "96px",
 };
 
 const baseH4Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "82px",
 };
 
 const baseH5Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "68px",
 };
 
 const baseH6Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "54px",
 };
 
 const baseH7Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "40px",
 };
 
 const baseH8Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "32px",
 };
 
 const baseH9Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "26px",
 };
 
 const baseH10Styles = {
-  fontFamily: PPPangram.style.fontFamily,
+  fontFamily: PPNeue.style.fontFamily,
   fontSize: "20px",
 };
+
+const JUMBOTHIN = defineStyle({
+  ...baseH1Styles,
+  fontWeight: 300,
+});
 
 /* H1 VARIANTS */
 const H1THIN = defineStyle({
@@ -534,6 +574,38 @@ const baseHattonH10Styles = {
   fontSize: "20px",
 };
 
+const jumboHattonStyles = {
+  fontFamily: PPHatton.style.fontFamily,
+  fontSize: "230px",
+};
+
+/* JUMBO STYLES */
+
+const JUMBOHATTONLIGHT = defineStyle({
+  ...jumboHattonStyles,
+  fontWeight: 300,
+});
+
+const JUMBOHATTONREGULAR = defineStyle({
+  ...jumboHattonStyles,
+  fontWeight: 400,
+});
+
+const JUMBOHATTONMEDIUM = defineStyle({
+  ...jumboHattonStyles,
+  fontWeight: 500,
+});
+
+const JUMBOHATTONBOLD = defineStyle({
+  ...jumboHattonStyles,
+  fontWeight: 600,
+});
+
+const JUMBOHATTONBOLDER = defineStyle({
+  ...jumboHattonStyles,
+  fontWeight: 700,
+});
+
 /* H1 VARIANT */
 
 const H1HATTONLIGHT = defineStyle({
@@ -877,6 +949,11 @@ export const HeadingTheme = defineStyleConfig({
     H10BOLD,
     H10BOLDER,
     /* HATTON FONT VARIANTS */
+    JUMBOHATTONLIGHT,
+    JUMBOHATTONREGULAR,
+    JUMBOHATTONMEDIUM,
+    JUMBOHATTONBOLD,
+    JUMBOHATTONBOLDER,
     H1HATTONLIGHT,
     H1HATTONREGULAR,
     H1HATTONMEDIUM,
