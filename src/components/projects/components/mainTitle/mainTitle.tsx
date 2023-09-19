@@ -8,12 +8,24 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
       w="100%"
       h="auto"
       bg="black"
-      p="240px 80px 60px 80px"
+      p={[
+        "180px 20px 60px 20px",
+        "240px 30px 60px 30px",
+        "240px 60px 60px 60px",
+        "240px 80px 60px 80px",
+        "240px 80px 60px 80px",
+      ]}
       placeItems="center"
     >
       <TextMaskY
         text={title}
-        variant="H2HATTONREGULAR"
+        variant={[
+          "H6HATTONREGULAR",
+          "H6HATTONREGULAR",
+          "H3HATTONREGULAR",
+          "H2HATTONREGULAR",
+          "H2HATTONREGULAR",
+        ]}
         delay={0.45}
         isFooter={false}
         className=""

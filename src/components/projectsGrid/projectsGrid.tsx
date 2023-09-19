@@ -1,9 +1,8 @@
-import { Box, Show, useMediaQuery } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import SectionHeader from "../sectionHeader/sectionHeader";
 import ColumnImages from "./columnImages/columnImages";
 import { allProjects, projectsColumn1, projectsColumn2 } from "./constants";
 import { ProjectsGridProps } from "./model";
-import { useEffect, useState } from "react";
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");

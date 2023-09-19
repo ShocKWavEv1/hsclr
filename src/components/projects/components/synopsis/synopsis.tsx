@@ -5,7 +5,16 @@ import { SynopsisProps } from "./model";
 
 const Synopsis: React.FC<SynopsisProps> = ({ synopsis }) => {
   return (
-    <Box w="100%" p="120px 80px 120px 80px">
+    <Box
+      w="100%"
+      p={[
+        "60px 20px 60px 20px",
+        "80px 30px 80px 30px",
+        "120px 60px 120px 60px",
+        "120px 80px 120px 80px",
+        "120px 80px 120px 80px",
+      ]}
+    >
       <SectionHeader
         section="synopsis"
         title="We choose a different → starting point"

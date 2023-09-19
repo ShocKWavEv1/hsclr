@@ -26,7 +26,6 @@ const ImageReveal: React.FC<ImageRevealProps> = ({ src }) => {
         style={{
           width: "100%",
           objectFit: "cover",
-          backgroundPosition: "fixed",
         }}
         priority
         sizes="100vw"

@@ -23,7 +23,6 @@ const Projects: React.FC = () => {
       <Synopsis synopsis={""} />
       <FullImage image={""} />
       <Summary />
-      <VideoPlayer video={""} />
     </Box>
   );
 };
