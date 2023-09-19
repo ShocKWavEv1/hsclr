@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
     <Box w="100%" h="auto" bg="black" placeItems="center">
       <MainTitle
         title={["A song for the dead"]}
-        categories={["[ colorgradong - editorial - post production ]"]}
+        categories={["[ colorgrading - editorial - post production ]"]}
       />
       <VideoPlayer video={""} />
       <Synopsis synopsis={""} />

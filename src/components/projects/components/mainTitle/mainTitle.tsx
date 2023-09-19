@@ -31,7 +31,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
         className=""
         once
       />
-      <Box w="100%" pt="10px">
+      <Box w="100%" pt="10px" opacity={[0.75, 1, 1, 1, 1]}>
         <TextMaskY
           text={categories}
           variant={["H10THIN", "H10LIGHT", "H10LIGHT", "H10LIGHT", "H10LIGHT"]}
