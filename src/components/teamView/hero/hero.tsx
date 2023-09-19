@@ -17,7 +17,7 @@ const HeroTeam: React.FC<HeroProps> = ({}) => {
         <SketchTeam />
       </Suspense>
       <PageHeroSection
-        text={["We are a collective ↔", "for minded & creative talents."]}
+        text={["We are a collective ↔ for minded & creative talents."]}
       />
     </Box>
   );

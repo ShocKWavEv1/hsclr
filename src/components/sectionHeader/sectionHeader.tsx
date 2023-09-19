@@ -70,6 +70,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               "MDREGULAR",
             ]}
             color={isDark ? "egg.400" : "black"}
+            pt="10px"
           >
             {brackets}
           </Text>

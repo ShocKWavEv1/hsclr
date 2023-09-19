@@ -28,7 +28,16 @@ const About: React.FC = () => {
       <FullManifesto />
       <DetailClub />
       <Reel />
-      <Box w="100%" p="120px 80px 0px 80px">
+      <Box
+        w="100%"
+        p={[
+          "60px 20px 100px 20px",
+          "60px 30px 100px 30px",
+          "120px 60px 40px 60px",
+          "120px 80px 40px 80px",
+          "120px 80px 40px 80px",
+        ]}
+      >
         <SectionHeader
           section="work"
           title="Every project is a chance to try something new with a fresh perspective"
@@ -36,7 +45,7 @@ const About: React.FC = () => {
           hasButton={false}
           isDark
         />
-        <Box w="100%" mt="80px">
+        <Box w="100%" mt={["40px", "50px", "80px", "80px", "80px"]}>
           {showcaseProjectsList.map((item: any, i: number) => {
             return <ThumbnailProject key={i} project={item} />;
           })}

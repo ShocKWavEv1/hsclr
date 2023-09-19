@@ -5,7 +5,17 @@ import { FullManifestoProps } from "./model";
 
 const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
   return (
-    <Box w="100%" p="100px 80px 0px 80px" className="bg-noise">
+    <Box
+      w="100%"
+      p={[
+        "80px 20px 0px 20px",
+        "80px 30px 0px 30px",
+        "120px 60px 0px 60px",
+        "120px 80px 0px 80px",
+        "120px 80px 0px 80px",
+      ]}
+      className="bg-noise"
+    >
       <SectionHeader
         section="about"
         title=""
@@ -20,11 +30,35 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Box w="80%" h="auto" mt="80px" className="split">
-          <Heading variant="H5HATTONREGULAR" color="egg.400">
+        <Box
+          w={["100%", "100%", "80%", "80%", "80%"]}
+          h="auto"
+          pt={["10px", "30px", "80px", "80px", "80px"]}
+          className="split"
+        >
+          <Heading
+            variant={[
+              "H7HATTONREGULAR",
+              "H6HATTONREGULAR",
+              "H5HATTONREGULAR",
+              "H5HATTONREGULAR",
+              "H5HATTONREGULAR",
+            ]}
+            color="egg.400"
+          >
             Allow us to be the cool part of your next project
           </Heading>
-          <Text pt="40px" variant="XXLREGULAR" color="egg.400">
+          <Text
+            pt="40px"
+            variant={[
+              "LGREGULAR",
+              "XLREGULAR",
+              "XXLREGULAR",
+              "XXLREGULAR",
+              "XXLREGULAR",
+            ]}
+            color="egg.400"
+          >
             Housecolor is a Mexican creative studio imagined by Rodrigo Salmerón
             and Baruc Narvaez. We help brands that do good Tambiéns logo on a
             flag stand out and find their people by providing a full creative
@@ -33,14 +67,23 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
             confidently attractive. At home, and abroad.
           </Text>
           <Box pt="80px">
-            <Heading variant="H7HATTONREGULAR" color="egg.400">
+            <Heading
+              variant={[
+                "H8HATTONREGULAR",
+                "H8HATTONREGULAR",
+                "H7HATTONREGULAR",
+                "H7HATTONREGULAR",
+                "H7HATTONREGULAR",
+              ]}
+              color="egg.400"
+            >
               - More than a statement. This is our manfesto
             </Heading>
-            <Text variant="MDREGULAR" color="egg.400">
+            <Text pt="10px" variant="MDREGULAR" color="egg.400">
               {`[ siguiendo estos principios, desarrollamos las mejores estrategias digitales ]`}
             </Text>
           </Box>
-          <Box w="100%" mt="80px">
+          <Box w="100%" mt={["40px", "50px", "80px", "80px", "80px"]}>
             <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 3]}>
               {fullManifestoSteps.map((item: any, i: number) => {
                 return (
@@ -52,7 +95,7 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
                     alignItems="flex-start"
                     justifyContent="flex-start"
                     flexDirection="column"
-                    p="40px"
+                    p={["40px 20px", "40px", "40px", "40px", "40px"]}
                     borderBottom={
                       i === 0 || i === 1 || i === 2 ? `1px solid #F9EBBB` : ""
                     }
@@ -75,12 +118,27 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
                         justifyContent="flex-start"
                         flexDirection="column"
                       >
-                        <Heading variant="H8HATTONREGULAR" color="egg.400">
+                        <Heading
+                          variant={[
+                            "H9HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                          ]}
+                          color="egg.400"
+                        >
                           {item.number}
                         </Heading>
                         <Heading
                           pt="20px"
-                          variant="H8HATTONREGULAR"
+                          variant={[
+                            "H9HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                            "H8HATTONREGULAR",
+                          ]}
                           color="egg.400"
                         >
                           {item.title}
@@ -95,7 +153,17 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
                       justifyContent="center"
                       flexDirection="column"
                     >
-                      <Text pt="80px" variant="MDREGULAR" color="egg.400">
+                      <Text
+                        pt={["40px", "60px", "80px", "80px", "80px"]}
+                        variant={[
+                          "SMREGULAR",
+                          "MDREGULAR",
+                          "MDREGULAR",
+                          "MDREGULAR",
+                          "MDREGULAR",
+                        ]}
+                        color="egg.400"
+                      >
                         {item.description}
                       </Text>
                     </Box>

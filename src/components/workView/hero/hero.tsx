@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
       <Suspense fallback>
         <SketchWork />
       </Suspense>
-      <PageHeroSection text={["We choose a different", "→ starting point."]} />
+      <PageHeroSection text={["We choose a different → starting point."]} />
     </Box>
   );
 };

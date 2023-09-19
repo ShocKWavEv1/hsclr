@@ -11,10 +11,10 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
       h="auto"
       p={[
         "0px 20px 0px 20px",
-        "0px 20px 0px 20px",
-        "60px 20px 60px 20px",
-        "120px 20px 120px 20px",
-        "120px 240px 120px 240px",
+        "0px 30px 0px 30px",
+        "60px 80px 60px 80px",
+        "60px 180px 120px 180px",
+        "60px 240px 120px 240px",
       ]}
     >
       {steps.map((item: any, i: number) => {
@@ -59,7 +59,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                     columns={[1, 1, 2, 2, 2]}
                     spacing="40px"
                   >
-                    <Box pl="10px" w="100%" borderLeft="1px solid white">
+                    <Box pl="10px" w="100%" borderLeft="1px solid #F9EBBB">
                       <Text variant="MDREGULAR" color="egg.400">
                         Working with the internationally renowned actress Li
                         Meng ( A touch of Sin, Dead Pigs, ...) helped us bring
@@ -67,7 +67,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                         would be today.
                       </Text>
                     </Box>
-                    <Box pl="10px" w="100%" borderLeft="1px solid white">
+                    <Box pl="10px" w="100%" borderLeft="1px solid #F9EBBB">
                       <Text variant="MDREGULAR" color="egg.400">
                         Due to geographic differences, we had to manage two
                         different shoots in Shanghai, where the actress located

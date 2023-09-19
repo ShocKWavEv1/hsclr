@@ -17,7 +17,7 @@ const Sketch = () => {
 
   useEffect(() => {
     const vertexShader = vertShader;
-    const fragmentShader = getFragShader(MINT_SHADER);
+    const fragmentShader = getFragShader(PARIS_DARK_SHADER);
 
     // Set up Three.js scene here
     const scene = new THREE.Scene();

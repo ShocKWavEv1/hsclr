@@ -7,7 +7,17 @@ import { ServicesGridProps } from "./model";
 
 const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
   return (
-    <Box w="100%" p="100px 80px 0px 80px" className="bg-noise">
+    <Box
+      w="100%"
+      p={[
+        "60px 20px 0px 20px",
+        "60px 30px 0px 30px",
+        "100px 60px 0px 60px",
+        "100px 80px 0px 80px",
+        "100px 80px 0px 80px",
+      ]}
+      className="bg-noise"
+    >
       <SectionHeader
         section="services"
         title="We help brands be their most inspiring selves. Own their quirks - their edge - their culture"
@@ -23,14 +33,24 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
         flexDirection="column"
         mb="120px"
       >
-        <Box w="80%" h="auto" mt="80px">
+        <Box
+          w={["100%", "100%", "80%", "80%", "80%"]}
+          h="auto"
+          mt={["40px", "50px", "80px", "80px", "80px"]}
+        >
           <SimpleGrid width="100%" columns={[1, 1, 2, 2]} spacing="0px">
             {fullServices.map((item: any, i: number) => {
               return (
                 <Box
-                  p="60px 40px"
+                  p={[
+                    "60px 20px",
+                    "60px 30px",
+                    "60px 40px",
+                    "60px 40px",
+                    "60px 40px",
+                  ]}
                   w="100%"
-                  h="77vh"
+                  h={["auto", "auto", "77vh", "77vh", "77vh"]}
                   display="flex"
                   alignItems="flex-start"
                   justifyContent="flex-start"
@@ -52,7 +72,13 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
                       text={[item.number]}
                       delay={0.45}
                       once
-                      variant="H6HATTONREGULAR"
+                      variant={[
+                        "H8HATTONREGULAR",
+                        "H7HATTONREGULAR",
+                        "H6HATTONREGULAR",
+                        "H6HATTONREGULAR",
+                        "H6HATTONREGULAR",
+                      ]}
                       className=""
                       isFooter={false}
                     />
@@ -61,7 +87,13 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
                         text={[item.title]}
                         delay={0.45}
                         once
-                        variant="H6HATTONREGULAR"
+                        variant={[
+                          "H8HATTONREGULAR",
+                          "H7HATTONREGULAR",
+                          "H6HATTONREGULAR",
+                          "H6HATTONREGULAR",
+                          "H6HATTONREGULAR",
+                        ]}
                         className=""
                         isFooter={false}
                       />
@@ -83,7 +115,17 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
                         duration: 0.75,
                       }}
                     >
-                      <Text variant="LGREGULAR" color="egg.400">
+                      <Text
+                        pt={["80px", "80px", "0px", "0px", "0px"]}
+                        variant={[
+                          "MDREGULAR",
+                          "MDREGULAR",
+                          "LGREGULAR",
+                          "LGREGULAR",
+                          "LGREGULAR",
+                        ]}
+                        color="egg.400"
+                      >
                         {item.description}
                       </Text>
                     </motion.div>

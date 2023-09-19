@@ -3,7 +3,7 @@ import { Box, Heading, Show, useMediaQuery } from "@chakra-ui/react";
 import { HeroTextProps } from "./model";
 
 const HeroText: React.FC<HeroTextProps> = ({ textMask }) => {
-  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+  const [isLargerThan768] = useMediaQuery("(min-width: 991px)");
 
   return (
     <Box
@@ -25,8 +25,8 @@ const HeroText: React.FC<HeroTextProps> = ({ textMask }) => {
       <Box
         p={[
           "60px 20px 0px 20px",
-          "0px 20px 0px 20px",
-          "0px 120px 0px 120px",
+          "120px 20px 0px 20px",
+          "120px 60px 0px 60px",
           "0px 120px 0px 120px",
           "0px 120px 0px 120px",
         ]}
@@ -40,7 +40,7 @@ const HeroText: React.FC<HeroTextProps> = ({ textMask }) => {
         <Heading
           variant={[
             "H6HATTONREGULAR",
-            "H6HATTONREGULAR",
+            "H5HATTONREGULAR",
             "H4HATTONREGULAR",
             "H4HATTONREGULAR",
             "H4HATTONREGULAR",

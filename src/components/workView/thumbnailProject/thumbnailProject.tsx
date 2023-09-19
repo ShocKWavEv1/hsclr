@@ -19,7 +19,7 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
       justifyContent="center"
       flexDirection="column"
     >
-      <Box w="80%" h="auto" mt="0px">
+      <Box w={["100%", "100%", "80%", "80%", "80%"]} h="auto" mt="0px">
         <Box
           w="100%"
           h="auto"
@@ -32,14 +32,20 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           className="project image-gallery"
           onClick={() => router.push("/projects")}
         >
-          <Box w="auto" mt="36px">
-            <Text variant="SMREGULAR" color="egg.400" mb="22px" mr="10px">
+          <Box w="auto">
+            <Text variant="SMREGULAR" color="egg.400" pr="10px">
               {project.number}
             </Text>
           </Box>
           <Heading
             className="thumbnail-text"
-            variant="H9HATTONREGULAR"
+            variant={[
+              "H9HATTONREGULAR",
+              "H7HATTONREGULAR",
+              "H5HATTONREGULAR",
+              "H5HATTONREGULAR",
+              "H6HATTONREGULAR",
+            ]}
             color="egg.400"
           >
             {project.title_1}
@@ -66,7 +72,13 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           </motion.div>
           <Heading
             className="thumbnail-text"
-            variant="H9HATTONREGULAR"
+            variant={[
+              "H9HATTONREGULAR",
+              "H7HATTONREGULAR",
+              "H6HATTONREGULAR",
+              "H6HATTONREGULAR",
+              "H6HATTONREGULAR",
+            ]}
             color="egg.400"
           >
             {project.title_2}
