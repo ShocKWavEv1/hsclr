@@ -45,7 +45,7 @@ const Preloader: React.FC<PreloaderProps> = () => {
         <Box>
           <TextMaskY
             text={phrases}
-            variant={["H10THIN", "H10THIN", "H9THIN", "H9THIN", "H9THIN"]}
+            variant={["H10THIN", "H10THIN", "H10THIN", "H10THIN", "H10THIN"]}
             delay={0.25}
             isFooter={false}
             className=""
