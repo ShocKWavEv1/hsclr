@@ -34,7 +34,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
       <Box w="100%" pt="10px">
         <TextMaskY
           text={categories}
-          variant="H10REGULAR"
+          variant={["H10THIN", "H10LIGHT", "H10LIGHT", "H10LIGHT", "H10LIGHT"]}
           delay={0.45}
           isFooter={false}
           className=""

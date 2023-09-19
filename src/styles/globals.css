@@ -182,9 +182,10 @@ ul{
 
 .loader::after {
   content: '';  
-  width: 50px;
+  width: 70px;
   height: 1px;
   background: #F5E1A4;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
