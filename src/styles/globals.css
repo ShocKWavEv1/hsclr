@@ -182,7 +182,7 @@ ul{
 
 .loader::after {
   content: '';  
-  width: 70px;
+  width: 50px;
   height: 1px;
   background: #F5E1A4;
   opacity: 0.5;
