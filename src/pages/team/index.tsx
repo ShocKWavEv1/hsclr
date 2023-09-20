@@ -2,12 +2,15 @@ import Footer from "@/components/layout/footer/footer";
 import HeroTeam from "@/components/teamView/hero/hero";
 import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 import { useEffect } from "react";
 
 const Team: React.FC = () => {
+  const isTouchableDevice = useIsTouchDevice();
+
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
+    !isTouchableDevice ? customCursor() : null;
   }, []);
 
   return (

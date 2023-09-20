@@ -18,13 +18,14 @@ import Capture from "@/components/capture/capture";
 import ParallaxGrid from "@/components/parallaxGrid/parallaxGrid";
 import Team from "@/components/team/team";
 import Footer from "@/components/layout/footer/footer";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 
 export default function Home() {
-  const router = useRouter();
+  const isTouchableDevice = useIsTouchDevice();
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
+    !isTouchableDevice ? customCursor() : null;
     scrollHeroText();
     scrollDiscoverText();
     scrollBackgroundColor();

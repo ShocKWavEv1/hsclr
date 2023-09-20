@@ -1,9 +1,9 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-export const scrollBackgroundColor = () => {
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
+export const scrollBackgroundColor = () => {
   const sections = document.querySelectorAll("section");
   const body = document.body;
   const colors = Array.from(sections).map((section) => ({
@@ -116,7 +116,7 @@ export const scrollLiveDetailsText = () => {
     textElement1,
     { xPercent: 0 },
     {
-      xPercent: -200,
+      xPercent: -270,
       //skewX: 150,
       scrollTrigger: {
         trigger: ".container",
@@ -150,7 +150,7 @@ export const scrollClubDetailsText = () => {
     textElement1,
     { xPercent: 0 },
     {
-      xPercent: 20,
+      xPercent: 40,
       //skewX: 150,
       scrollTrigger: {
         trigger: ".container",

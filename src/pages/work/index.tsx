@@ -6,11 +6,14 @@ import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import ThumbnailProject from "@/components/workView/thumbnailProject/thumbnailProject";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 
 const Work: React.FC = () => {
+  const isTouchableDevice = useIsTouchDevice();
+
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
+    !isTouchableDevice ? customCursor() : null;
   }, []);
 
   return (
@@ -35,7 +38,7 @@ const Work: React.FC = () => {
         />
         <Box w="100%" pt={["40px", "50px", "80px", "80px", "80px"]}>
           {allProjectsList.map((item: any, i: number) => {
-            return <ThumbnailProject key={i} project={item} />;
+            return <ThumbnailProject key={item.title_1} project={item} />;
           })}
         </Box>
       </Box>

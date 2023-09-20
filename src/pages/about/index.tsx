@@ -17,7 +17,6 @@ import { useEffect } from "react";
 const About: React.FC = () => {
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
     scrollLiveDetailsText();
     scrollClubDetailsText();
   }, []);

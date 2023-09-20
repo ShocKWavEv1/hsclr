@@ -36,7 +36,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({ text }) => {
         variant={[
           "H7HATTONREGULAR",
           "H6HATTONREGULAR",
-          "H4HATTONREGULAR",
+          "H6HATTONREGULAR",
           "H4HATTONREGULAR",
           "H4HATTONREGULAR",
         ]}

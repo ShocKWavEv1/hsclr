@@ -3,11 +3,14 @@ import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import HeroServices from "@/components/servicesView/hero/hero";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 
 const Contact: React.FC = () => {
+  const isTouchableDevice = useIsTouchDevice();
+
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
+    !isTouchableDevice ? customCursor() : null;
   }, []);
 
   return (

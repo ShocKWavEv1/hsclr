@@ -8,7 +8,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
   return (
     <Box
       w="100%"
-      bg="primary.500"
+      bg="black"
       display="flex"
       alignItems="flex-start"
       position="relative"

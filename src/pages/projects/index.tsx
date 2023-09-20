@@ -5,12 +5,15 @@ import Synopsis from "@/components/projects/components/synopsis/synopsis";
 import VideoPlayer from "@/components/projects/components/videoPlayer/videoPlayer";
 import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 import React, { useEffect } from "react";
 
 const Projects: React.FC = () => {
+  const isTouchableDevice = useIsTouchDevice();
+
   useEffect(() => {
     window.scroll({ top: 0 });
-    customCursor();
+    !isTouchableDevice ? customCursor() : null;
   }, []);
 
   return (

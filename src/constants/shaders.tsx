@@ -38,6 +38,18 @@ vec3 accent =  vec3(0./255., 0./255., 0./255.);
 vec3 baseSecond = vec3(23./255., 37./255., 200./255.);
 vec3 baseThird =  vec3(3./255., 13./255., 150./255.);`;
 
+export const getShaderHeight = (width: number, height: number) => {
+  if (width > 991) {
+    return height * 0.62;
+  } else if (width <= 991 && width > 767) {
+    return height * 0.58;
+  } else if (width <= 767 && width > 479) {
+    return height * 0.58;
+  } else {
+    return height * 0.5;
+  }
+};
+
 export const vertShader = `    
     uniform float time;
     varying vec2 vUv;

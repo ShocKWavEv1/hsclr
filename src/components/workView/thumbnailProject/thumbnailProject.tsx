@@ -33,7 +33,17 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           onClick={() => router.push("/projects")}
         >
           <Box w="auto">
-            <Text variant="SMREGULAR" color="egg.400" pr="10px">
+            <Text
+              variant={[
+                "XSSREGULAR",
+                "XSREGULAR",
+                "SMREGULAR",
+                "SMREGULAR",
+                "SMREGULAR",
+              ]}
+              color="egg.400"
+              pr="10px"
+            >
               {project.number}
             </Text>
           </Box>

@@ -40,7 +40,8 @@ const DetailClub: React.FC<DetailClubProps> = ({}) => {
           ]}
           color="egg.400"
         >
-          We ↔ live ↔ in ↔ the ↔ details ↔ We ↔ live ↔ in ↔ the ↔ details ↔
+          We ↔ live ↔ in ↔ the ↔ details ↔ We ↔ live ↔ in ↔ the ↔ details ↔ We ↔
+          live ↔ in ↔ the ↔ details ↔ We ↔ live ↔ in ↔ the ↔ details ↔
         </Heading>
       </Box>
       <Box className="slider-manifesto-live">

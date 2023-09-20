@@ -8,6 +8,7 @@ import "@/styles/globals.css";
 import Fonts from "@/theme/fonts/fonts";
 import theme from "@/theme/theme";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
@@ -22,6 +23,8 @@ export default function App({
   const LoadingBarRef: any = useRef(null);
 
   const router = useRouter();
+
+  const isTouchableDevice = useIsTouchDevice();
 
   useEffect(() => {
     // router event listeners for loadingBar
@@ -62,11 +65,11 @@ export default function App({
   return (
     <ChakraProvider theme={theme}>
       <Meta
-        title={"housecolor | construimos experiencias y productos digitales"}
+        title={"† housecolor | we live in the details †"}
         description="construimos experiencias y productos digitales"
       />
       <Fonts />
-      <Cursor />
+      {!isTouchableDevice ? <Cursor /> : null}
       <Preloader />
       <LoadingBar ref={LoadingBarRef} height={3} color="#ff98a2" />
       <PageTransition router={router}>
