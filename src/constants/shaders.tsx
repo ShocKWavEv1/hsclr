@@ -23,10 +23,10 @@ vec3 accent =  vec3(0./255., 0./255., 0./255.);
 vec3 baseSecond =  vec3(255./255., 217./255., 217./255.);
 vec3 baseThird =  vec3(238./255., 46./255., 49./255.);`;
 
-export const PARIS_DARK_SHADER = `vec3 baseFirst = vec3(243./255., 0./255., 3./255.);
+export const PARIS_DARK_SHADER = `vec3 baseFirst = vec3(129./255., 33./255., 218./255.);
 vec3 accent =  vec3(0./255., 0./255., 0./255.);
-vec3 baseSecond = vec3(129./255., 33./255., 218./255.);
-vec3 baseThird =  vec3(243./255., 0./255., 3./255.);`;
+vec3 baseSecond = vec3(76./255., 54./255., 120./255.);
+vec3 baseThird =  vec3(129./255., 33./255., 218./255.);`;
 
 export const PARIS_SHADER = `vec3 baseFirst = vec3(243./255., 11./255., 8./255.);
 vec3 accent =  vec3(0./255., 0./255., 0./255.);
