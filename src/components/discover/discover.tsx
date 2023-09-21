@@ -25,7 +25,10 @@ const Discover = ({}) => {
             ml={["100px", "100px", "240px", "500px", "500px"]}
           >
             Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
-            reel ↔
+            reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔
+            our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔
+            Discover ↔ our ↔ reel ↔ Discover ↔ our ↔ reel ↔ Discover ↔ our ↔
+            reel ↔ Discover ↔ our ↔ reel ↔
           </Heading>
         </Box>
       </motion.div>
