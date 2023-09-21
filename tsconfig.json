@@ -22,8 +22,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/sketch/sketch.tsx",
-    "src/components/sketch/sketch.tsx",
+    "src/components/sketch/sketch.jsx",
+    "src/components/sketch/sketch.jsx",
     "src/components/workView/sketchWork/sketchWork.jsx", "src/components/teamView/sketchTeam/sketchTeam.jsx", "src/components/aboutView/sketchAbout/sketchAbout.jsx", "src/components/servicesView/sketchServices/sketchServices.jsx", ],
   "exclude": ["node_modules"]
 }

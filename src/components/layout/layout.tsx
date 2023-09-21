@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import Footer from "./footer/footer";
 import { LayoutProps } from "./model";
 import Navbar from "./navbar/navbar";
 

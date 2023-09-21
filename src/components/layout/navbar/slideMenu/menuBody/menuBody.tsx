@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { MenuBodyProps } from "./model";
 import { motion } from "framer-motion";
 import { blur, translate } from "../../drawer/animation";
@@ -36,11 +36,22 @@ const MenuBody: React.FC<MenuBodyProps> = ({
       w="100%"
       h="auto"
       bg="black"
-      p="180px 40px 20px 40px"
+      p={[
+        "110px 20px 40px 20px",
+        "110px 30px 40px 30px",
+        "180px 40px 20px 40px",
+        "180px 40px 20px 40px",
+        "180px 40px 20px 40px",
+      ]}
       onClick={(e: any) => e.stopPropagation()}
     >
-      <Box className="nav-grid">
-        <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 3]} spacing="40px">
+      <Box w={["100%", "100%", "100%", "100%", "80%"]}>
+        <SimpleGrid
+          w="100%"
+          h="100%"
+          columns={[1, 1, 2, 2, 3]}
+          spacing={["30px", "35px", "40px", "40px", "40px"]}
+        >
           {links.map((item: any, index: number) => {
             return (
               <Box
@@ -53,7 +64,17 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                   router.push(item.path);
                 }}
               >
-                <Text as="span" variant="MDMEDIUM" color="egg.400">
+                <Heading
+                  as="span"
+                  variant={[
+                    "H8LIGHT",
+                    "H7LIGHT",
+                    "H6LIGHT",
+                    "H6LIGHT",
+                    "H6LIGHT",
+                  ]}
+                  color="egg.400"
+                >
                   <motion.p
                     onMouseOver={() => {
                       setSelectedLink({ isActive: true, index });
@@ -82,17 +103,23 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                       justifyContent="center"
                     >
                       <Text
-                        variant="SMREGULAR"
+                        variant={[
+                          "XSLIGHT",
+                          "SMLIGHT",
+                          "SMLIGHT",
+                          "SMLIGHT",
+                          "SMLIGHT",
+                        ]}
                         color="egg.400"
-                        mb="22px"
-                        mr="10px"
+                        mb={["10px", "10px", "12px", "12px", "12px"]}
+                        mr="15px"
                       >
                         {`[ ${index + 1} ]`}
                       </Text>
                     </Box>
                     {getChars(item.label)}
                   </motion.p>
-                </Text>
+                </Heading>
               </Box>
             );
           })}

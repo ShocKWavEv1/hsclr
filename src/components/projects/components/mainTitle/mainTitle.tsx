@@ -9,7 +9,7 @@ const MainTitle: React.FC<MainTitleProps> = ({ title, categories }) => {
       h="auto"
       bg="black"
       p={[
-        "180px 20px 60px 20px",
+        "180px 20px 40px 20px",
         "240px 30px 60px 30px",
         "240px 60px 60px 60px",
         "240px 80px 60px 80px",

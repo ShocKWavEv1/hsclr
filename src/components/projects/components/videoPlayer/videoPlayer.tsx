@@ -1,14 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { VideoPlayerProps } from "../videoPlayer/model";
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({}) => {
   const [showFullReel, setShowFullReel] = useState(false);
+  const [isLargerThan568] = useMediaQuery("(min-width: 568px)");
   return (
     <Box className="image-gallery" onClick={() => setShowFullReel(true)}>
       <motion.div
-        initial={{ opacity: 0, y: 250 }}
+        initial={{ opacity: 0, y: isLargerThan568 ? 250 : 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}

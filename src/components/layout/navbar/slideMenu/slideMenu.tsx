@@ -3,6 +3,7 @@ import { SlideMenuProps } from "./model";
 import MenuFooter from "./menuFooter/menuFooter";
 import MenuBody from "./menuBody/menuBody";
 import { useState } from "react";
+import { Box, Show } from "@chakra-ui/react";
 
 const SlideMenu: React.FC<SlideMenuProps> = ({ links, isOpen, setOpen }) => {
   const [selectedLink, setSelectedLink] = useState({

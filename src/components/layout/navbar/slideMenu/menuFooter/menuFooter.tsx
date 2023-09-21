@@ -10,14 +10,30 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
       w="100%"
       h="auto"
       bg="black"
+      display="flex"
+      alignItems="center"
+      justifyContent="flex-start"
       className="nav-shadow"
-      p="70px 40px 30px 40px"
+      p={[
+        "0px 20px 30px 20px",
+        "0px 30px 30px 30px",
+        "70px 40px 30px 40px",
+        "70px 40px 30px 40px",
+        "70px 40px 30px 40px",
+      ]}
       onClick={(e: any) => e.stopPropagation()}
     >
-      <Box w="100%" display="flex" flexDirection="row" overflow="hidden">
+      <Box
+        w="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        flexDirection="row"
+        overflow="hidden"
+      >
         <Box
-          w="60%"
-          display="flex"
+          w="70%"
+          display={["none", "none", "flex", "flex", "flex"]}
           alignItems="center"
           justifyContent="flex-start"
           flexDirection="row"
@@ -50,10 +66,16 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
           </Stack>
         </Box>
         <Box
-          w="40%"
+          w={["100%", "100%", "30%", "30%", "30%"]}
           display="flex"
           alignItems="center"
-          justifyContent="flex-end"
+          justifyContent={[
+            "flex-start",
+            "flex-start",
+            "flex-end",
+            "flex-end",
+            "flex-end",
+          ]}
           flexDirection="row"
         >
           <Stack direction="row" spacing="20px">
@@ -68,15 +90,15 @@ const MenuFooter: React.FC<MenuFooterProps> = ({}) => {
                     exit="exit"
                   >
                     <Box
-                      border="1px solid white"
-                      p="2px 15px"
-                      borderRadius="1vw"
+                      border="1px solid #F9EBBB"
+                      p="5px 18px"
+                      borderRadius="5vw"
                       color="egg.400"
                       transition=".35s ease-in-out"
-                      _hover={{ bg: "egg.400", color: "black" }}
+                      _hover={{ bg: "egg.500", color: "black" }}
                       cursor="pointer"
                     >
-                      <Text pt="4px" opacity={0.75} variant="XSMEDIUM">
+                      <Text pt="0px" variant="XSREGULAR">
                         {item.name}
                       </Text>
                     </Box>
