@@ -96,11 +96,11 @@ export const scrollDiscoverText = () => {
     textElement1,
     { xPercent: 0 },
     {
-      xPercent: -600,
+      xPercent: -700,
       //skewX: 150,
       scrollTrigger: {
         trigger: ".container",
-        start: "center center",
+        start: "start start",
         end: "bottom bottom",
         scrub: true,
       },

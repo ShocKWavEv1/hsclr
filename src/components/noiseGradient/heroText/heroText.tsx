@@ -59,6 +59,7 @@ const HeroText: React.FC<HeroTextProps> = ({ textMask }) => {
         justifyContent="center"
         flexDirection="column"
         textAlign="center"
+        mt="20px"
       >
         <TextMask
           text={textMask}
