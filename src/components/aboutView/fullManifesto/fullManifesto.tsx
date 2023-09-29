@@ -84,7 +84,7 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
             </Text>
           </Box>
           <Box w="100%" mt={["40px", "50px", "80px", "80px", "80px"]}>
-            <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 3]}>
+            <SimpleGrid w="100%" h="100%" columns={[1, 1, 2, 2, 3]}>
               {fullManifestoSteps.map((item: any, i: number) => {
                 return (
                   <Box
@@ -95,15 +95,31 @@ const FullManifesto: React.FC<FullManifestoProps> = ({}) => {
                     alignItems="flex-start"
                     justifyContent="flex-start"
                     flexDirection="column"
-                    p={["40px 20px", "40px", "40px", "40px", "40px"]}
-                    borderBottom={
-                      i === 0 || i === 1 || i === 2 ? `1px solid #F9EBBB` : ""
-                    }
-                    borderRight={
-                      i === 0 || i === 1 || i === 3 || i === 4
-                        ? "1px solid #F9EBBB"
-                        : ""
-                    }
+                    p={["60px 20px", "40px", "40px", "40px", "40px"]}
+                    borderBottom={[
+                      `${i === 5 ? "" : `1px solid #F9EBBB`}`,
+                      `${i === 5 ? "" : `1px solid #F9EBBB`}`,
+                      "",
+                      "",
+                      `${
+                        i === 3 || i === 4 || i === 5 ? "" : `1px solid #F9EBBB`
+                      }`,
+                    ]}
+                    borderRight={[
+                      "",
+                      "",
+                      `${
+                        i === 0 || i === 2 || i === 4 ? `1px solid #F9EBBB` : ""
+                      }`,
+                      `${
+                        i === 0 || i === 2 || i === 4 ? `1px solid #F9EBBB` : ""
+                      }`,
+                      `${
+                        i === 0 || i === 1 || i === 3 || i === 4
+                          ? `1px solid #F9EBBB`
+                          : ""
+                      }`,
+                    ]}
                   >
                     <Box
                       w="100%"

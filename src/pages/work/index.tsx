@@ -13,8 +13,8 @@ const Work: React.FC = () => {
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    !isTouchableDevice ? customCursor() : null;
-  }, []);
+    isTouchableDevice === false ? customCursor() : {};
+  }, [isTouchableDevice]);
 
   return (
     <Box w="100%" h="auto" overflowX="hidden">

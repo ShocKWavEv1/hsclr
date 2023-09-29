@@ -30,7 +30,7 @@ const TextMaskY: React.FC<TextYProps> = ({
   });
 
   return (
-    <Box w="100%" ref={ref}>
+    <Box w="100%" ref={ref} className="body">
       {phrases.map((phrase: any, index: any) => {
         return (
           <Box w="100%" key={index} overflow="hidden">

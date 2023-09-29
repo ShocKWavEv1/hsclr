@@ -1,5 +1,5 @@
 import { Box, Heading, Show, SimpleGrid } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { NavbarProps } from "./model";
@@ -11,7 +11,32 @@ import SlideMenu from "./slideMenu/slideMenu";
 import { AnimatePresence } from "framer-motion";
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<any>(false);
+  const [currentScroll, setCurrentScroll] = useState<number>(0);
+
+  useEffect(() => {
+    // Add a scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      if (currentScroll > 30) {
+        setOpen(false);
+      }
+    }
+  }, [currentScroll, isOpen]);
+
+  const handleScroll = () => {
+    // Your scroll event handling logic here
+    const currentPosition = window.scrollY;
+    setCurrentScroll(currentPosition);
+  };
 
   const router = useRouter();
   return (
@@ -66,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                     "H10LIGHT",
                     "H10LIGHT",
                   ]}
-                  color="egg.400"
+                  color="egg.500"
                   pl="12px"
                 >
                   housecolor | studio

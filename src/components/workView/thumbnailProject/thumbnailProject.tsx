@@ -5,9 +5,12 @@ import { useState } from "react";
 import { anim } from "./constants";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 
 const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
   const [isActive, setIsActive] = useState(false);
+
+  const isTouchableDevice = useIsTouchDevice();
 
   const router = useRouter();
 
@@ -24,12 +27,12 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
           w="100%"
           h="auto"
           onMouseEnter={() => {
-            setIsActive(true);
+            !isTouchableDevice ? setIsActive(true) : null;
           }}
           onMouseLeave={() => {
-            setIsActive(false);
+            !isTouchableDevice ? setIsActive(false) : null;
           }}
-          className="project image-gallery"
+          className={`project image-gallery `}
           onClick={() => router.push("/projects")}
         >
           <Box w="auto">
@@ -65,7 +68,7 @@ const ThumbnailProject: React.FC<ThumbnailProjectProps> = ({ project }) => {
             animate={isActive ? "open" : "closed"}
             className="imgContainer"
           >
-            <Box w="200px" h="100px">
+            <Box w={["100px", "150px", "200px", "200px", "200px"]} h="100px">
               <Image
                 src="/static/media/thumbnail.jpeg"
                 alt="thumbnail"

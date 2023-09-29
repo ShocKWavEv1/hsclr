@@ -12,14 +12,18 @@ import {
   scrollLiveDetailsText,
 } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
+import { useIsTouchDevice } from "@studio-freight/hamo";
 import { useEffect } from "react";
 
 const About: React.FC = () => {
+  const isTouchableDevice = useIsTouchDevice();
+
   useEffect(() => {
     window.scroll({ top: 0 });
+    isTouchableDevice === false ? customCursor() : {};
     scrollLiveDetailsText();
     scrollClubDetailsText();
-  }, []);
+  }, [isTouchableDevice]);
 
   return (
     <Box w="100%" h="auto" overflowX="hidden">

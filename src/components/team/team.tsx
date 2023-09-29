@@ -52,13 +52,13 @@ const Team: React.FC<TeamProps> = ({}) => {
             gap="50px"
           >
             <TeamList
-              teamList={isLargerThan768 ? teamList1 : allTeamList}
+              teamList={teamList1}
               direction="left"
               classColumn="column-left-scroll"
               classImage="image-column-left"
             />
             <TeamList
-              teamList={isLargerThan768 ? teamList2 : []}
+              teamList={teamList2}
               direction="right"
               classColumn="column-right-scroll"
               classImage="image-column-right"

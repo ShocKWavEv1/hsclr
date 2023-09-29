@@ -25,12 +25,12 @@ export default function Home() {
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    !isTouchableDevice ? customCursor() : null;
+    isTouchableDevice === false ? customCursor() : {};
     scrollHeroText();
     scrollDiscoverText();
     scrollBackgroundColor();
     scrollColumnImages();
-  }, []);
+  }, [isTouchableDevice]);
 
   return (
     <Box w="100%" h="auto" overflowX="hidden">

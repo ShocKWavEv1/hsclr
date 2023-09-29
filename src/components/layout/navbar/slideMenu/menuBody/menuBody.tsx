@@ -67,7 +67,7 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                 <Heading
                   as="span"
                   variant={[
-                    "H8LIGHT",
+                    "H9LIGHT",
                     "H7LIGHT",
                     "H6LIGHT",
                     "H6LIGHT",
@@ -104,14 +104,14 @@ const MenuBody: React.FC<MenuBodyProps> = ({
                     >
                       <Text
                         variant={[
-                          "XSLIGHT",
+                          "XSSLIGHT",
                           "SMLIGHT",
                           "SMLIGHT",
                           "SMLIGHT",
                           "SMLIGHT",
                         ]}
                         color="egg.400"
-                        mb={["10px", "10px", "12px", "12px", "12px"]}
+                        mb={["7px", "10px", "12px", "12px", "12px"]}
                         mr="15px"
                       >
                         {`[ ${index + 1} ]`}

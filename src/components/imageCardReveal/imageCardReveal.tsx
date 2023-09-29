@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useInView } from "react-intersection-observer";
 import { ImageCardRevealProps } from "./model";
+import BlurredImage from "../blurredImage/blurredImage";
 
 const ImageCardReveal: React.FC<ImageCardRevealProps> = ({
   item,
@@ -43,22 +44,7 @@ const ImageCardReveal: React.FC<ImageCardRevealProps> = ({
           overflow="hidden"
           position="relative"
         >
-          <Box
-            w="100%"
-            h="100%"
-            transition="transform 0.3s ease"
-            _hover={{ transform: "scale(1.2)" }}
-          >
-            <Image
-              src={src}
-              alt={"housecolor-projects"}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </Box>
+          <BlurredImage image={src} />
           {/*<Box
             w="100%"
             h="100%"

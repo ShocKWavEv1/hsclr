@@ -27,7 +27,7 @@ const HeroFooter: React.FC<HeroFooterProps> = ({ options }) => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          padding="20px 80px"
+          padding="20px 50px"
         >
           <Box
             w="auto"

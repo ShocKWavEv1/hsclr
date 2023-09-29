@@ -65,7 +65,7 @@ export default function App({
   return (
     <ChakraProvider theme={theme}>
       <Meta
-        title={"† housecolor | we live in the details †"}
+        title={"housecolor | we live in the details"}
         description="construimos experiencias y productos digitales"
       />
       <Fonts />

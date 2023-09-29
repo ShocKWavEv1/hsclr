@@ -23,6 +23,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({ text }) => {
       justifyContent="flex-end"
       flexDirection="column"
       zIndex={2}
+      overflow="hidden"
       p={[
         "0px 20px 30px 20px",
         "0px 20px 30px 20px",
