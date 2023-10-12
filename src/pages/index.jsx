@@ -18,10 +18,12 @@ import Capture from "@/components/capture/capture";
 import ParallaxGrid from "@/components/parallaxGrid/parallaxGrid";
 import Team from "@/components/team/team";
 import Footer from "@/components/layout/footer/footer";
-import { useIsTouchDevice } from "@studio-freight/hamo";
+import { useIsTouchDevice, useWindowSize } from "@studio-freight/hamo";
 
 export default function Home() {
   const isTouchableDevice = useIsTouchDevice();
+
+  const { width } = useWindowSize();
 
   useEffect(() => {
     window.scroll({ top: 0 });
@@ -29,8 +31,8 @@ export default function Home() {
     scrollHeroText();
     scrollDiscoverText();
     scrollBackgroundColor();
-    scrollColumnImages();
-  }, [isTouchableDevice]);
+    width > 569 ? scrollColumnImages() : null;
+  }, [isTouchableDevice, width]);
 
   return (
     <Box w="100%" h="auto" overflowX="hidden">

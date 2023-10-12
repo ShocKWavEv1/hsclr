@@ -1,12 +1,19 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
 import SectionHeader from "../sectionHeader/sectionHeader";
 import ColumnImages from "./columnImages/columnImages";
-import { allProjects, projectsColumn1, projectsColumn2 } from "./constants";
+import {
+  allProjects,
+  allProjectsList,
+  projectsColumn1,
+  projectsColumn1Mobile,
+  projectsColumn2,
+  projectsColumn2Mobile,
+} from "./constants";
 import { ProjectsGridProps } from "./model";
+import { useWindowSize } from "@studio-freight/hamo";
 
-const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
-  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
-
+const ProjectsGrid = ({}) => {
+  const { width } = useWindowSize();
   return (
     <Box
       as="section"
@@ -53,14 +60,14 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({}) => {
             gap="50px"
           >
             <ColumnImages
-              images={projectsColumn1}
+              images={width > 569 ? projectsColumn1 : projectsColumn1Mobile}
               direction="left"
               classColumn="column-left-scroll"
               classImage="image-column-left"
             />
             <ColumnImages
-              images={projectsColumn2}
-              direction="right"
+              images={width > 569 ? projectsColumn2 : projectsColumn2Mobile}
+              direction={width > 569 ? "right" : "none"}
               classColumn="column-right-scroll"
               classImage="image-column-right"
             />

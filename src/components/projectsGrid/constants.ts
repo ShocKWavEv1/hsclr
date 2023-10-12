@@ -77,6 +77,76 @@ export const projectsColumn2 = [
   },
 ];
 
+export const projectsColumn1Mobile = [
+  {
+    img: image_1,
+    smallImg: "",
+    bg: "primary.500",
+    title: "Canada Monky - Goose Collection",
+    description: "Color grading - Edition",
+    number: "[ 1 ]",
+  },
+  {
+    img: image_9,
+    smallImg: "",
+    bg: "pink.500",
+    title: "Power Over Men - Jamie T",
+    description: "Color grading - Edition",
+    number: "[ 2 ]",
+  },
+  {
+    img: image_3,
+    smallImg: "",
+    bg: "primary.500",
+    title: "La Dame de Soie - Cartier",
+    description: "Color grading - Edition",
+    number: "[ 3 ]",
+  },
+  {
+    img: image_4,
+    smallImg: "",
+    bg: "pink.500",
+    title: "Four out of Five - Arctic Monkeys",
+    description: "Color grading - Edition",
+    number: "[ 4 ]",
+  },
+];
+
+export const projectsColumn2Mobile = [
+  {
+    img: image_5,
+    smallImg: "",
+    bg: "primary.500",
+    title: "Vent du grace - Miles Kane",
+    description: "Color grading - Edition",
+    number: "[ 5 ]",
+  },
+  {
+    img: image_6,
+    smallImg: "",
+    bg: "pink.500",
+    title: "A Song For The Dead - QOTSA",
+    description: "Color grading - Edition",
+    number: "[ 6 ]",
+  },
+  {
+    img: image_2,
+    smallImg: "",
+    bg: "primary.500",
+    title: "Sports - Viagra Boys",
+    description: "Color grading - Edition",
+    number: "[ 7 ]",
+  },
+  {
+    img: image_8,
+    smallImg: "",
+    bg: "pink.500",
+    title: "Reflektor - Arcade Fire",
+    description: "Color grading - Edition",
+    number: "[ 8 ]",
+  },
+];
+
 export const allProjects = [
   {
     img: image_1,

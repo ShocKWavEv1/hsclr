@@ -24,6 +24,6 @@
     "**/*.tsx",
     "src/components/sketch/sketch.jsx",
     "src/components/sketch/sketch.jsx",
-    "src/components/workView/sketchWork/sketchWork.jsx", "src/components/teamView/sketchTeam/sketchTeam.jsx", "src/components/aboutView/sketchAbout/sketchAbout.jsx", "src/components/servicesView/sketchServices/sketchServices.jsx", ],
+    "src/components/workView/sketchWork/sketchWork.jsx", "src/components/teamView/sketchTeam/sketchTeam.jsx", "src/components/aboutView/sketchAbout/sketchAbout.jsx", "src/components/servicesView/sketchServices/sketchServices.jsx", "src/pages/index.jsx", "src/components/projectsGrid/projectsGrid.jsx", "src/components/projectsGrid/projectsGrid.jsx", "src/components/projectsGrid/projectsGrid.jsx", "src/pages/index.jsx", ],
   "exclude": ["node_modules"]
 }
