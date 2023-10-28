@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import NoiseGradient from "@/components/noiseGradient/noiseGradient";
 import {
@@ -21,13 +21,15 @@ import Footer from "@/components/layout/footer/footer";
 import { useIsTouchDevice, useWindowSize } from "@studio-freight/hamo";
 
 export default function Home() {
+  const videoRef = useRef(null);
+
   const isTouchableDevice = useIsTouchDevice();
 
   const { width } = useWindowSize();
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    isTouchableDevice === false ? customCursor() : {};
+    isTouchableDevice === false ? customCursor(videoRef) : {};
     scrollHeroText();
     scrollDiscoverText();
     scrollBackgroundColor();
@@ -41,7 +43,7 @@ export default function Home() {
       <Clients />
       <Manifesto />
       <Discover />
-      <Reel />
+      <Reel videoRef={videoRef} />
       <Capture />
       <ParallaxGrid />
       <Team />

@@ -25,18 +25,18 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                 <TextMaskY
                   text={[item.number]}
                   variant={[
+                    "H8HATTONREGULAR",
+                    "H7HATTONREGULAR",
                     "H7HATTONREGULAR",
                     "H6HATTONREGULAR",
                     "H6HATTONREGULAR",
-                    "H5HATTONREGULAR",
-                    "H5HATTONREGULAR",
                   ]}
                   delay={0.25}
                   isFooter={false}
                   className=""
                   once
                 />
-                <Box w="100%" pt={["10px", "20px", "40px", "40px", "40px"]}>
+                <Box w="100%" pt={["10px", "20px", "30px", "30px", "30px"]}>
                   <TextMaskY
                     text={[item.title]}
                     variant={[
@@ -52,14 +52,14 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                     once
                   />
                 </Box>
-                <Box w="100%" pt={["40px", "40px", "80px", "80px", "80px"]}>
+                <Box w="100%" pt={["40px", "40px", "60px", "60px", "60px"]}>
                   <SimpleGrid
                     w="100%"
                     h="100%"
                     columns={[1, 1, 2, 2, 2]}
                     spacing="40px"
                   >
-                    <Box pl="10px" w="100%" borderLeft="1px solid #F9EBBB">
+                    <Box pl="20px" w="100%" borderLeft="1px solid #F9EBBB">
                       <Text variant="MDREGULAR" color="egg.400">
                         Working with the internationally renowned actress Li
                         Meng ( A touch of Sin, Dead Pigs, ...) helped us bring
@@ -67,7 +67,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                         would be today.
                       </Text>
                     </Box>
-                    <Box pl="10px" w="100%" borderLeft="1px solid #F9EBBB">
+                    <Box pl="20px" w="100%" borderLeft="1px solid #F9EBBB">
                       <Text variant="MDREGULAR" color="egg.400">
                         Due to geographic differences, we had to manage two
                         different shoots in Shanghai, where the actress located

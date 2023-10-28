@@ -1,21 +1,52 @@
-import { Box, useMediaQuery } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { VideoPlayerProps } from "../videoPlayer/model";
+import { VideoPlayerProps } from "./model";
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({}) => {
+const Reel: React.FC<VideoPlayerProps> = ({ videoRef }) => {
   const [showFullReel, setShowFullReel] = useState(false);
-  const [isLargerThan568] = useMediaQuery("(min-width: 568px)");
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.addEventListener("play", () => {
+        setIsPlaying(true);
+      });
+      videoRef.current.addEventListener("pause", () => {
+        setIsPlaying(false);
+      });
+    }
+  }, []);
+
   return (
-    <Box className="image-gallery" onClick={() => setShowFullReel(true)}>
+    <Box
+      className="play-cursor"
+      onClick={() => {
+        setShowFullReel(true);
+        handlePlayPause();
+      }}
+    >
       <motion.div
-        initial={{ opacity: 0, y: isLargerThan568 ? 250 : 200 }}
+        initial={{ opacity: 0, y: 250 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
         <Box display={showFullReel ? "none" : "block"}>
           <video
+            ref={videoRef}
             controls={false}
             autoPlay={true}
             loop={true}
@@ -23,23 +54,23 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({}) => {
             muted
             width="100%"
             height="100%"
+            onClick={handlePlayPause}
           >
-            <source
-              src="static/media/projects/monopo/monopo.mp4"
-              type="video/mp4"
-            />
+            <source src="static/media/reel.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Box>
         <Box display={showFullReel ? "block" : "none"}>
           <video
-            controls={true}
+            ref={videoRef}
+            controls={false}
             autoPlay={true}
             loop={true}
             playsInline={true}
             muted
             width="100%"
             height="100%"
+            onClick={handlePlayPause}
           >
             <source
               src="static/media/projects/monopo/monopo.mp4"
@@ -53,4 +84,4 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({}) => {
   );
 };
 
-export default VideoPlayer;
+export default Reel;

@@ -13,14 +13,16 @@ import {
 } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
 import { useIsTouchDevice } from "@studio-freight/hamo";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const About: React.FC = () => {
+  const videoRef = useRef(null);
+
   const isTouchableDevice = useIsTouchDevice();
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    isTouchableDevice === false ? customCursor() : {};
+    isTouchableDevice === false ? customCursor(videoRef) : {};
     scrollLiveDetailsText();
     scrollClubDetailsText();
   }, [isTouchableDevice]);
@@ -30,7 +32,7 @@ const About: React.FC = () => {
       <HeroAbout />
       <FullManifesto />
       <DetailClub />
-      <Reel />
+      <Reel videoRef={videoRef} />
       <Box
         w="100%"
         p={[

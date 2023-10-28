@@ -6,14 +6,16 @@ import VideoPlayer from "@/components/projects/components/videoPlayer/videoPlaye
 import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
 import { useIsTouchDevice } from "@studio-freight/hamo";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Projects: React.FC = () => {
+  const videoRef = useRef(null);
+
   const isTouchableDevice = useIsTouchDevice();
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    isTouchableDevice === false ? customCursor() : {};
+    isTouchableDevice === false ? customCursor(videoRef) : {};
   }, [isTouchableDevice]);
 
   return (
@@ -22,7 +24,7 @@ const Projects: React.FC = () => {
         title={["A song for the dead"]}
         categories={["[ colorgrading - editorial - post production ]"]}
       />
-      <VideoPlayer video={""} />
+      <VideoPlayer video={""} videoRef={videoRef} />
       <Synopsis synopsis={""} />
       <FullImage image={""} />
       <Summary />

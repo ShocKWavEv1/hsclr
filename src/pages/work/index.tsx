@@ -4,16 +4,18 @@ import SectionHeader from "@/components/sectionHeader/sectionHeader";
 import Hero from "@/components/workView/hero/hero";
 import { customCursor } from "@/constants/constants";
 import { Box } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import ThumbnailProject from "@/components/workView/thumbnailProject/thumbnailProject";
 import { useIsTouchDevice } from "@studio-freight/hamo";
 
 const Work: React.FC = () => {
+  const videoRef = useRef(null);
+
   const isTouchableDevice = useIsTouchDevice();
 
   useEffect(() => {
     window.scroll({ top: 0 });
-    isTouchableDevice === false ? customCursor() : {};
+    isTouchableDevice === false ? customCursor(videoRef) : {};
   }, [isTouchableDevice]);
 
   return (

@@ -1,3 +1,4 @@
 export interface VideoPlayerProps {
-    video: any;
+  video: any;
+  videoRef: any;
 }

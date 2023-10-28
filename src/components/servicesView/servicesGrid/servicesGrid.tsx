@@ -74,10 +74,10 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({}) => {
                       once
                       variant={[
                         "H8HATTONREGULAR",
+                        "H8HATTONREGULAR",
                         "H7HATTONREGULAR",
-                        "H6HATTONREGULAR",
-                        "H6HATTONREGULAR",
-                        "H6HATTONREGULAR",
+                        "H7HATTONREGULAR",
+                        "H7HATTONREGULAR",
                       ]}
                       className=""
                       isFooter={false}

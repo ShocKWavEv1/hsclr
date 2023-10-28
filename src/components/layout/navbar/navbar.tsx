@@ -78,9 +78,14 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 className="link"
                 display="flex"
                 alignItems="center"
-                justifyContent="center"
+                justifyContent="flex-start"
               >
-                <Image priority src={circles} alt="housecolor logo" />
+                <Image
+                  width={80}
+                  priority
+                  src={circles}
+                  alt="housecolor logo"
+                />
               </Box>
               <Show above="md">
                 <Heading
